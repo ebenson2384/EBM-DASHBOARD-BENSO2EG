@@ -1,0 +1,1292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My EBM Dashboard | MGT357 - Fall 2025</title>
+    <!-- Theme updated: Purple / Gold / Black palette applied on 2025-09-16 -->
+    <style>
+        /* === CSS CUSTOM PROPERTIES (Purple / Gold / Black) === */
+        :root {
+            --color-purple: #6f42c1; /* primary purple */
+            --color-purple-dark: #4b2d8f;
+            --color-gold: #d4af37; /* accent gold */
+            --color-gold-2: #b9892b;
+            --color-black: #0b0b0b; /* deep black */
+            --primary-gradient: linear-gradient(135deg, var(--color-purple) 0%, var(--color-black) 100%);
+            --tab-active: var(--color-gold);
+            --tab-inactive: #2c2c2c;
+            --step-green: var(--color-purple);
+            --step-blue: var(--color-gold);
+            --border-radius: 15px;
+            --transition-speed: 0.3s;
+            /* High-contrast variables */
+            --text-high-contrast: #ffffff;
+            --text-high-contrast-strong: #f7f7f7;
+            --text-muted: #cfcfcf;
+            --panel-bg: rgba(0,0,0,0.72);
+            --link-contrast: #ffd97a;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: var(--primary-gradient);
+            min-height: 100vh;
+            padding: 20px;
+            color: var(--text-high-contrast-strong);
+        }
+
+        /* Responsive typography and safe layout: ensure words fit, center content, and avoid horizontal scroll */
+        html { font-size: clamp(14px, 1.6vw, 18px); }
+        body { overflow-x: hidden; -webkit-font-smoothing:antialiased; }
+        .container { padding: 28px; }
+
+        /* Center panels and ensure text wraps cleanly */
+        .container > * { display: block; margin-left: auto; margin-right: auto; }
+        .tab-content { display: flex; justify-content: center; }
+        .tab-panel { max-width: 1000px; width: calc(100% - 48px); margin: 18px auto; text-align: center; padding: 28px; box-sizing: border-box; }
+        .tab-panel * { text-align: center; }
+
+        /* Force all text within tab panels to white for consistent readability */
+        .tab-panel, .tab-panel * {
+            color: var(--text-high-contrast) !important;
+        }
+
+        /* Make pre blocks responsive and wrapped so lines fit on screen */
+        pre, .content-file-preview pre {
+            white-space: pre-wrap !important;
+            word-wrap: break-word !important;
+            overflow-wrap: break-word !important;
+            hyphens: auto;
+            text-align: center;
+            font-size: 0.95rem;
+            line-height: 1.5;
+            margin: 12px 0;
+            color: var(--text-high-contrast);
+            text-shadow: 0 2px 6px rgba(0,0,0,0.6);
+        }
+
+        /* Increase panel contrast for better readability */
+        .content-file-preview, .milestone-tracker, .evidence-section, .container .header {
+            background: var(--panel-bg);
+            border: 1px solid rgba(255,255,255,0.06);
+            color: var(--text-high-contrast-strong);
+        }
+
+        /* Ensure headings are readable and centered */
+    .tab-panel h2, .tab-panel h3, .tab-panel h4, .header h1 { color: var(--text-high-contrast); text-align: center; text-shadow: 0 6px 18px rgba(0,0,0,0.45); }
+    /* Ensure subheadings inside tabs are white for maximum contrast */
+    .tab-panel h3, .tab-panel h4, .tab-panel h5 { color: var(--text-high-contrast) !important; }
+
+        /* NOTE: background uses an image file at assets/lebron.jpg - ensure you have the right to use this image.
+           If you don't want to store the image locally, provide a licensed external URL and update the path below.
+        */
+        /* Parallax-style background using fixed attachment and a subtle vignette for drama */
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            position: relative;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+        }
+
+        /* Background layer placed behind container content */
+        .container::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+                /* Using Unsplash dynamic source for a high-quality photo; bias toward 'lebron' tag.
+                    If you need a specific, licensed LeBron image, upload it to assets/ and I'll point to it.
+                */
+                background-image: linear-gradient(rgba(11,11,11,0.32), rgba(11,11,11,0.32)), url('https://source.unsplash.com/1600x900/?lebron,portrait,dramatic');
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-attachment: fixed; /* parallax effect */
+            z-index: 0;
+            transform: translateZ(0);
+            will-change: transform;
+        }
+
+        /* Vignette for cinematic look */
+        .container::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse at center, rgba(0,0,0,0) 45%, rgba(0,0,0,0.45) 100%);
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        /* Make children appear above background layers */
+        .container > * {
+            position: relative;
+            z-index: 10; /* ensure content sits above edge-collar */
+        }
+
+        /* Edge collar collage around the container (top/right/bottom/left). */
+        .edge-collar {
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            pointer-events: none;
+            z-index: 5; /* above bg but below content */
+            display: block;
+        }
+
+        .edge-collar::before,
+        .edge-collar::after,
+        .edge-collar .left,
+        .edge-collar .right {
+            content: '';
+            position: absolute;
+            background-size: cover;
+            background-position: center center;
+            mix-blend-mode: screen;
+            opacity: 0.95;
+            filter: saturate(120%) contrast(105%);
+        }
+
+        /* top strip */
+        .edge-collar::before {
+            position: fixed;
+            top: 0; left: 0; right: 0; height: 12vh;
+            background-image: url('https://source.unsplash.com/1200x200/?basketball,stadium');
+            box-shadow: inset 0 -40px 60px rgba(11,11,11,0.55);
+        }
+
+        /* bottom strip */
+        .edge-collar::after {
+            position: fixed;
+            bottom: 0; left: 0; right: 0; height: 14vh;
+            background-image: url('https://source.unsplash.com/1200x200/?dunk,action');
+            box-shadow: inset 0 40px 60px rgba(11,11,11,0.55);
+        }
+
+        /* left vertical strip (pseudo via inner element) */
+        .edge-collar .left {
+            position: fixed;
+            top: 0; bottom: 0; left: 0; width: 8vw;
+            background-image: url('https://source.unsplash.com/400x1200/?jr-smith,basketball');
+            box-shadow: inset 40px 0 60px rgba(11,11,11,0.55);
+        }
+
+        /* right vertical strip (pseudo via inner element) */
+        .edge-collar .right {
+            position: fixed;
+            top: 0; bottom: 0; right: 0; width: 8vw;
+            background-image: url('https://source.unsplash.com/400x1200/?nba,player');
+            box-shadow: inset -40px 0 60px rgba(11,11,11,0.55);
+        }
+
+        /* ensure content still clickable */
+    .edge-collar, .edge-collar * { pointer-events: none; }
+
+        /* Star border - decorative repeating stars along viewport edges */
+        .star-border {
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            pointer-events: none;
+            z-index: 8; /* above edge-collar but below main content */
+        }
+
+        /* small golden star SVG data URI */
+        :root {
+            /* white star SVG (encoded). Use %23 for # in URL encoding */
+            --star-svg: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'><polygon fill='%23ffffff' points='12,2 15,9 22,9 16.5,13.5 18.5,21 12,16.8 5.5,21 7.5,13.5 2,9 9,9'/></svg>");
+        }
+
+        .star-border::before,
+        .star-border::after,
+        .star-border .left-stars,
+        .star-border .right-stars {
+            content: '';
+            position: fixed;
+            pointer-events: none;
+            background-repeat: repeat;
+            background-size: 28px 28px;
+            opacity: 0.95;
+            mix-blend-mode: screen;
+            filter: drop-shadow(0 0 6px rgba(255,255,255,0.9)) drop-shadow(0 0 12px rgba(255,255,255,0.55));
+        }
+
+        /* twinkle animation */
+        @keyframes twinkle {
+            0% { opacity: 0.7; transform: scale(0.98); filter: drop-shadow(0 0 4px rgba(255,255,255,0.6)); }
+            50% { opacity: 1; transform: scale(1.06); filter: drop-shadow(0 0 12px rgba(255,255,255,0.95)); }
+            100% { opacity: 0.75; transform: scale(1); filter: drop-shadow(0 0 6px rgba(255,255,255,0.8)); }
+        }
+
+        /* top row */
+        .star-border::before {
+            top: 6px; left: 0; right: 0; height: 36px;
+            background-image: var(--star-svg);
+            background-position: center top;
+            background-repeat: repeat-x;
+            background-size: 32px 32px;
+            animation: twinkle 4.2s infinite ease-in-out;
+        }
+
+        /* bottom row */
+        .star-border::after {
+            bottom: 6px; left: 0; right: 0; height: 36px;
+            background-image: var(--star-svg);
+            background-position: center bottom;
+            background-repeat: repeat-x;
+            background-size: 32px 32px;
+            animation: twinkle 4.6s infinite ease-in-out;
+        }
+
+        /* left column */
+        .star-border .left-stars {
+            top: 0; bottom: 0; left: 6px; width: 36px;
+            background-image: var(--star-svg);
+            background-repeat: repeat-y;
+            background-size: 32px 32px;
+            animation: twinkle 5.0s infinite ease-in-out;
+        }
+
+        /* right column */
+        .star-border .right-stars {
+            top: 0; bottom: 0; right: 6px; width: 36px;
+            background-image: var(--star-svg);
+            background-repeat: repeat-y;
+            background-size: 32px 32px;
+            animation: twinkle 4.8s infinite ease-in-out;
+        }
+
+        /* scattered star elements */
+        .star {
+            position: fixed;
+            display: block;
+            background: radial-gradient(circle at 30% 30%, #fff, #eaf8ff 40%, rgba(255,255,255,0.6) 60%);
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(255,255,255,0.9), 0 0 22px rgba(173,216,230,0.22), 0 0 40px rgba(173,216,230,0.16);
+            transform-origin: center center;
+            filter: blur(0.6px) drop-shadow(0 0 12px rgba(255,255,255,0.95));
+            animation: twinkle 4s infinite ease-in-out, floaty 6s infinite ease-in-out;
+        }
+
+        @keyframes floaty {
+            0% { transform: translateY(0) scale(1); }
+            50% { transform: translateY(-4px) scale(1.03); }
+            100% { transform: translateY(0) scale(1); }
+        }
+
+        /* Planet styling (CSS-only artistic planets) */
+        .planet {
+            position: fixed;
+            width: 78px;
+            height: 78px;
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 9; /* above star-border but below main content */
+            box-shadow: 0 8px 30px rgba(0,0,0,0.6), 0 0 24px rgba(255,255,255,0.05) inset;
+            filter: drop-shadow(0 0 16px rgba(255,255,255,0.06));
+            animation: planet-spin 18s linear infinite, floaty 6s ease-in-out infinite;
+        }
+
+        .planet::before,
+        .planet::after {
+            content: '';
+            position: absolute;
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+    /* Jupiter-like (p1) - bands, storms */
+    .planet.p1 { background: radial-gradient(circle at 30% 30%, #ffd9b3 0%, #f3b96b 35%, #d79a5a 55%, #b86b2b 100%); box-shadow: 0 8px 40px rgba(184,107,43,0.25); transform: translateZ(0); }
+    .planet.p1::before { width: 120%; height: 120%; left: -10%; top: -10%; background: conic-gradient(from 200deg at 50% 50%, rgba(0,0,0,0.02), rgba(0,0,0,0.06)); mix-blend-mode: multiply; opacity:0.55; transform: rotate(18deg); }
+    .planet.p1::after { width: 140%; height: 36%; left: -15%; top: 48%; background: linear-gradient(90deg, rgba(255,255,255,0.12), rgba(255,255,255,0.02)); transform: rotate(-18deg); filter: blur(2px); }
+    .planet.p1 .storm { position:absolute; width:22px; height:14px; right:10px; top:38px; border-radius:20px; background: radial-gradient(circle at 35% 35%, #ffb879, #8a3f1a); box-shadow: 0 6px 12px rgba(255,120,60,0.18) inset; transform: rotate(-12deg); }
+
+    /* Neptune-like (p2) - soft bands and subtle noise */
+    .planet.p2 { background: radial-gradient(circle at 35% 35%, #bfeeff 0%, #87d5f6 28%, #46a7d6 60%, #2b7fa6 100%); box-shadow: 0 8px 40px rgba(44,127,166,0.18); }
+    .planet.p2::before { width: 100%; height: 100%; left: 0; top: 0; background: repeating-linear-gradient(90deg, rgba(255,255,255,0.02) 0 6px, transparent 6px 18px); opacity:0.28; mix-blend-mode: overlay; }
+    .planet.p2::after { width: 120%; height: 28%; left: -10%; top: 52%; background: linear-gradient(90deg, rgba(255,255,255,0.08), rgba(255,255,255,0.01)); transform: rotate(-12deg); filter: blur(2px); }
+
+    /* Small rocky (p3) - craters */
+    .planet.p3 { width: 58px; height: 58px; background: radial-gradient(circle at 30% 30%, #e6d8c4 0%, #d6c4a8 45%, #bfa88f 65%, #6f4a2e 100%); box-shadow: 0 6px 18px rgba(111,74,46,0.2); }
+    .planet.p3::before { width: 130%; height: 130%; left:-15%; top:-15%; background: radial-gradient(circle at 30% 30%, rgba(0,0,0,0.06) 1%, transparent 8%), radial-gradient(circle at 70% 70%, rgba(0,0,0,0.07) 1%, transparent 9%); opacity:0.6; mix-blend-mode:multiply; }
+
+    /* Saturn-like ringed (p4) - textured ring */
+    .planet.p4 { background: radial-gradient(circle at 30% 30%, #fff0d6 0%, #ffd38a 40%, #c68a3a 100%); }
+    .planet.p4::before { width: 110%; height: 110%; left:-5%; top:-5%; background: radial-gradient(circle at 40% 40%, rgba(255,255,255,0.03), transparent 20%); mix-blend-mode: overlay; }
+    .planet.p4::after { width: 180%; height: 40%; left: -40%; top: 52%; background: linear-gradient(90deg, rgba(180,120,50,0.65), rgba(255,255,255,0.06)), repeating-linear-gradient(90deg, rgba(0,0,0,0.04) 0 6px, rgba(255,255,255,0.02) 6px 12px); transform: rotate(-25deg); border-radius: 50% / 40%; filter: blur(1.6px); }
+
+    /* Distant glowing (p5) - layered glow */
+    .planet.p5 { width: 100px; height: 100px; left: 48vw; top: 3vh; background: radial-gradient(circle at 40% 40%, #ffd1f0 0%, #ff97d1 30%, #7a2a6a 100%); filter: blur(0.3px) drop-shadow(0 0 32px rgba(255,150,200,0.32)); animation-duration:22s; }
+    .planet.p5::before { width: 180%; height: 180%; left:-40%; top:-40%; background: radial-gradient(circle at 40% 40%, rgba(255,200,230,0.18), transparent 35%); mix-blend-mode: screen; }
+
+        /* Planet rings */
+        .planet .ring {
+            position: absolute;
+            left: 50%; top: 50%;
+            width: 260%; height: 80%;
+            transform: translate(-50%, -50%) rotate(-25deg);
+            border-radius: 50% / 40%;
+            pointer-events: none;
+            z-index: 1;
+            overflow: visible;
+        }
+
+        .planet .ring::before,
+        .planet .ring::after {
+            content: '';
+            position: absolute;
+            left: 0; top: 0; right: 0; bottom: 0;
+            border-radius: inherit;
+            pointer-events: none;
+            transform-origin: center center;
+        }
+
+        /* main dusty ring */
+        .planet .ring::before {
+            background: radial-gradient(ellipse at center, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0.03) 16%, rgba(255,255,255,0.01) 26%, transparent 34%), repeating-radial-gradient(circle at 40% 40%, rgba(200,180,160,0.14) 0 1px, rgba(0,0,0,0.00) 1px 4px);
+            filter: blur(0.9px) drop-shadow(0 2px 6px rgba(0,0,0,0.55));
+            opacity: 1;
+        }
+
+        /* bright band */
+        .planet .ring::after {
+            background: linear-gradient(90deg, rgba(255,255,255,0.12), rgba(255,255,255,0.03));
+            transform: scaleY(0.36) translateY(6%);
+            opacity: 0.9;
+        }
+
+        /* textured planet surfaces (subtle overlays) */
+        .planet::after { mix-blend-mode: overlay; }
+        .planet { background-image: radial-gradient(circle at 60% 35%, rgba(255,255,255,0.03), transparent 15%), radial-gradient(circle at 20% 70%, rgba(0,0,0,0.06), transparent 25%); }
+
+        /* Orbiting moons */
+        .planet .orbit {
+            position: absolute;
+            left: 50%; top: 50%;
+            width: 220%; height: 220%;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 0;
+            animation: orbit-rotate linear infinite;
+        }
+
+        .planet .orbit .moon {
+            position: absolute;
+            width: 12px; height: 12px;
+            border-radius: 50%;
+            background: radial-gradient(circle at 30% 30%, #ffffff, #e6e6e6 30%, #bfbfbf 100%);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.6), 0 0 8px rgba(255,255,255,0.06) inset;
+            top: 8%; left: 50%; transform: translateX(-50%);
+            filter: drop-shadow(0 2px 6px rgba(0,0,0,0.4));
+        }
+
+        /* Vary speeds so moons look natural */
+        .planet.p1 .orbit { animation-duration: 10s; }
+        .planet.p2 .orbit { animation-duration: 16s; }
+        .planet.p3 .orbit { animation-duration: 22s; }
+        .planet.p4 .orbit { animation-duration: 14s; }
+        .planet.p5 .orbit { animation-duration: 20s; }
+
+        @keyframes orbit-rotate {
+            from { transform: translate(-50%, -50%) rotate(0deg); }
+            to { transform: translate(-50%, -50%) rotate(360deg); }
+        }
+
+        /* Fiery sun in the top-right */
+        .sun {
+            position: fixed;
+            top: 28px; right: 28px;
+            width: 120px; height: 120px;
+            border-radius: 50%;
+            z-index: 7; /* behind content but above collar */
+            pointer-events: none;
+            background: radial-gradient(circle at 30% 30%, #fff3c9 0%, #ffd27a 12%, #ff9a1f 35%, #ff5a00 60%, #8b2200 100%);
+            box-shadow: 0 0 48px rgba(255,120,20,0.5), 0 0 120px rgba(255,100,30,0.18) inset;
+            filter: saturate(120%) blur(0.6px);
+            transform: translateZ(0);
+            animation: sun-pulse 3.6s ease-in-out infinite, sun-flicker 1.8s linear infinite;
+        }
+
+        .sun::before,
+        .sun::after {
+            content: '';
+            position: absolute;
+            left: 50%; top: 50%; transform: translate(-50%, -50%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        /* outer corona */
+        .sun::before {
+            width: 240px; height: 240px;
+            background: radial-gradient(circle, rgba(255,180,90,0.08), rgba(255,120,30,0.02));
+            filter: blur(18px);
+            opacity: 0.95;
+        }
+
+        /* inner flicker texture */
+        .sun::after {
+            width: 160px; height: 160px;
+            background: conic-gradient(from 120deg, rgba(255,255,255,0.06), rgba(255,200,120,0.08), rgba(255,140,40,0.06), rgba(255,255,255,0.04));
+            mix-blend-mode: screen;
+            filter: blur(6px);
+            opacity: 0.9;
+        }
+
+        @keyframes sun-pulse {
+            0% { transform: scale(1) translateZ(0); }
+            50% { transform: scale(1.04) translateZ(0); }
+            100% { transform: scale(1) translateZ(0); }
+        }
+
+        @keyframes sun-flicker {
+            0% { opacity: 0.94; }
+            30% { opacity: 1; filter: saturate(140%) blur(0.4px); }
+            60% { opacity: 0.9; filter: saturate(110%) blur(1px); }
+            100% { opacity: 0.95; }
+        }
+
+        @keyframes planet-spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        /* Subtle glass panel effect for inner content to improve readability */
+    .container .header,
+        .container .milestone-tracker,
+        .content-file-preview,
+        .evidence-section {
+            background: rgba(255,255,255,0.04); /* subtle translucent panels */
+            backdrop-filter: blur(6px) saturate(120%);
+            -webkit-backdrop-filter: blur(6px) saturate(120%);
+            border: 1px solid rgba(255,255,255,0.04);
+        }
+
+        /* Header refined for transparency */
+        .header {
+            background: linear-gradient(135deg, rgba(11,11,11,0.25), rgba(79,36,140,0.12));
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.6);
+        }
+
+        /* Slight lift and neon edge for H1 to pop against the image */
+        .header h1 {
+            text-shadow: 0 6px 24px rgba(75,45,143,0.28), 0 2px 6px rgba(0,0,0,0.6);
+        }
+
+        .header {
+            background: linear-gradient(135deg, var(--color-black), var(--color-purple));
+            color: var(--text-high-contrast);
+            padding: 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.95;
+        }
+
+        /* Live badge and refresh button */
+        .live-controls {
+            margin-top: 12px;
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .live-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 10px;
+            border-radius: 999px;
+            background: linear-gradient(90deg, rgba(34,34,34,0.6), rgba(255,215,120,0.06));
+            color: var(--text-high-contrast);
+            font-weight: 700;
+            font-size: 0.95rem;
+            cursor: pointer;
+            border: 1px solid rgba(255,255,255,0.05);
+            box-shadow: 0 4px 14px rgba(0,0,0,0.45);
+        }
+
+        .live-dot { width: 10px; height: 10px; border-radius: 50%; background: #ff6b6b; box-shadow: 0 0 8px rgba(255,100,100,0.85); }
+
+        .refresh-btn {
+            padding: 8px 14px;
+            border-radius: 8px;
+            background: rgba(255,255,255,0.06);
+            color: var(--text-high-contrast);
+            border: 1px solid rgba(255,255,255,0.04);
+            cursor: pointer;
+            font-weight: 700;
+        }
+
+        .refresh-btn:hover { transform: translateY(-2px); }
+
+        .student-info {
+            background: var(--panel-bg);
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 10px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            font-size: 0.9em;
+            color: var(--text-high-contrast-strong);
+        }
+
+        /* === SIMPLE TAB SYSTEM === */
+        .tab-nav {
+            display: flex;
+            background: #121212;
+            border-bottom: 3px solid #272727;
+        }
+
+        .tab-button {
+            flex: 1;
+            padding: 20px;
+            text-align: center;
+            cursor: pointer;
+            background: var(--tab-inactive);
+            color: white;
+            font-weight: bold;
+            font-size: 1.1em;
+            transition: all var(--transition-speed);
+            border: none;
+            border-right: 2px solid rgba(255,255,255,0.03);
+        }
+
+        .tab-button:last-child {
+            border-right: none;
+        }
+
+        .tab-button:hover {
+            background: var(--color-purple-dark);
+            transform: translateY(-2px);
+        }
+
+        .tab-button.active {
+            background: var(--tab-active);
+            color: #0b0b0b;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 18px rgba(212,175,55,0.2);
+        }
+
+        .tab-content {
+            position: relative;
+            min-height: 500px;
+        }
+
+        .tab-panel {
+            display: none;
+            padding: 40px;
+            animation: fadeIn 0.3s ease-in;
+            color: #eaeaea;
+        }
+
+        .tab-panel.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateX(20px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        /* === FLOWCHART STYLING === */
+        .flowchart-step {
+            background: var(--step-green);
+            color: white;
+            padding: 15px 25px;
+            border-radius: 25px;
+            margin: 15px 0;
+            font-weight: bold;
+            text-align: center;
+            box-shadow: 0 4px 18px rgba(79, 36, 140, 0.25);
+        }
+
+        .decision-diamond {
+            background: var(--step-blue);
+            color: #0b0b0b;
+            padding: 15px 25px;
+            border-radius: 10px;
+            margin: 15px 0;
+            text-align: center;
+            position: relative;
+            transform: rotate(45deg);
+        }
+
+        .decision-diamond .text {
+            transform: rotate(-45deg);
+            font-weight: bold;
+        }
+
+        .content-file-preview {
+            background: var(--panel-bg);
+            border: 1px dashed rgba(255,255,255,0.06);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            color: var(--text-high-contrast-strong);
+        }
+
+        .content-file-preview:hover {
+            border-color: var(--color-gold);
+            background: #0b0b0c;
+        }
+
+        .content-file-preview h4 {
+            color: var(--link-contrast);
+            margin-bottom: 10px;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        a { color: var(--link-contrast); font-weight: 700; }
+        a:hover { color: #ffeaa3; }
+
+        .edit-notice {
+            background: rgba(212,175,55,0.08);
+            border: 1px solid rgba(212,175,55,0.14);
+            color: var(--color-gold);
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+            font-size: 0.8em;
+        }
+
+        .evidence-type {
+            display: inline-block;
+            padding: 8px 15px;
+            margin: 5px;
+            border-radius: 20px;
+            color: white;
+            font-weight: bold;
+        }
+
+        .scientific { background: var(--color-purple); }
+        .practitioner { background: var(--color-gold); color: #0b0b0b; }
+        .organizational { background: #1a1a1a; }
+        .stakeholder { background: var(--color-purple-dark); }
+
+        .evidence-section {
+            margin: 40px 0;
+            padding: 25px;
+            border-left: 5px solid #222;
+            background: #0f0f10;
+            border-radius: 10px;
+        }
+
+        .evidence-section h3 {
+            margin-top: 0;
+            margin-bottom: 20px;
+            padding: 10px 20px;
+            border-radius: 25px;
+            display: inline-block;
+        }
+
+        .evidence-section .content-file-preview {
+            margin: 15px 0;
+        }
+
+        .progress-indicator {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            background: linear-gradient(135deg, #0f0f10, #1a1a1a);
+            margin: 0;
+            border-bottom: 3px solid #222;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.6);
+        }
+
+        /* Responsive nav/progress adjustments */
+        @media (max-width: 720px) {
+            .progress-indicator { flex-direction: column; gap: 8px; padding: 12px; }
+            .tab-nav { flex-direction: column; }
+            .tab-button { padding: 12px; font-size: 0.95rem; }
+            .tab-panel { width: calc(100% - 32px); padding: 18px; }
+        }
+
+        .progress-step {
+            flex: 1;
+            text-align: center;
+            padding: 12px 8px;
+            margin: 0 5px;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 0.9em;
+            transition: all var(--transition-speed);
+            position: relative;
+            cursor: pointer;
+            color: #eee;
+        }
+
+        .progress-step.completed {
+            background: linear-gradient(135deg, var(--color-purple-dark), var(--color-purple));
+            color: white;
+            transform: scale(1.05);
+            box-shadow: 0 4px 15px rgba(75,45,143,0.25);
+        }
+
+        .progress-step.active {
+            background: linear-gradient(135deg, var(--color-gold), var(--color-gold-2));
+            color: #0b0b0b;
+            transform: scale(1.05);
+            box-shadow: 0 4px 15px rgba(212,175,55,0.18);
+        }
+
+        .progress-step.pending {
+            background: #2b2b2b;
+            color: #ddd;
+        }
+
+        .progress-step::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: -15px;
+            width: 0;
+            height: 0;
+            border-left: 10px solid;
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid transparent;
+            transform: translateY(-50%);
+            z-index: 1;
+        }
+
+        .progress-step.completed::after {
+            border-left-color: var(--color-purple);
+        }
+
+        .progress-step.active::after {
+            border-left-color: var(--color-gold);
+        }
+
+        .progress-step.pending::after {
+            border-left-color: #2b2b2b;
+        }
+
+        .progress-step:last-child::after {
+            display: none;
+        }
+
+        .btn {
+            background: linear-gradient(135deg, var(--color-gold), var(--color-gold-2));
+            color: #0b0b0b;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: bold;
+            margin: 10px 5px;
+            transition: all var(--transition-speed);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 18px rgba(212,175,55,0.25);
+        }
+
+        .milestone-tracker {
+            background: #0f0f10;
+            border-left: 4px solid var(--color-gold);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+
+        .milestone-tracker h4 {
+            color: #eaeaea;
+            margin-bottom: 10px;
+        }
+
+        .checklist {
+            list-style: none;
+            padding: 0;
+        }
+
+        .checklist li {
+            padding: 5px 0;
+            color: #ccc;
+        }
+
+        .checklist li:before {
+            content: "\u2610 ";
+            color: var(--color-gold);
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Decorative edge collar: four-photo collage pinned to the page edges -->
+    <div class="edge-collar" aria-hidden="true">
+        <div class="left"></div>
+        <div class="right"></div>
+    </div>
+    <!-- Star border: repeating gold star SVG along the viewport edges -->
+    <div class="star-border" aria-hidden="true">
+        <div class="left-stars"></div>
+        <div class="right-stars"></div>
+        <!-- scattered stars (positioned with percentages) -->
+        <i class="star" style="left:4%; top:8%; width:22px; height:22px; opacity:0.95; animation-delay:0.1s"></i>
+        <i class="star" style="left:9%; top:30%; width:28px; height:28px; opacity:0.9; animation-delay:0.6s"></i>
+        <i class="star" style="left:3%; top:60%; width:18px; height:18px; opacity:0.75; animation-delay:1.1s"></i>
+        <i class="star" style="left:6%; top:84%; width:26px; height:26px; opacity:0.85; animation-delay:1.6s"></i>
+
+        <i class="star" style="left:18%; top:4%; width:20px; height:20px; opacity:0.9; animation-delay:0.9s"></i>
+        <i class="star" style="left:28%; top:12%; width:32px; height:32px; opacity:1; animation-delay:0.3s"></i>
+        <i class="star" style="left:24%; top:44%; width:16px; height:16px; opacity:0.7; animation-delay:2.1s"></i>
+        <i class="star" style="left:22%; top:76%; width:20px; height:20px; opacity:0.8; animation-delay:1.8s"></i>
+
+        <i class="star" style="left:40%; top:6%; width:30px; height:30px; opacity:0.95; animation-delay:0.5s"></i>
+        <i class="star" style="left:46%; top:28%; width:18px; height:18px; opacity:0.75; animation-delay:1.2s"></i>
+        <i class="star" style="left:38%; top:58%; width:22px; height:22px; opacity:0.8; animation-delay:0.8s"></i>
+        <i class="star" style="left:42%; top:82%; width:26px; height:26px; opacity:0.9; animation-delay:2.4s"></i>
+
+        <i class="star" style="left:60%; top:10%; width:20px; height:20px; opacity:0.85; animation-delay:0.2s"></i>
+        <i class="star" style="left:68%; top:34%; width:28px; height:28px; opacity:0.95; animation-delay:0.7s"></i>
+        <i class="star" style="left:66%; top:62%; width:16px; height:16px; opacity:0.7; animation-delay:1.9s"></i>
+        <i class="star" style="left:72%; top:86%; width:24px; height:24px; opacity:0.85; animation-delay:2.2s"></i>
+
+        <i class="star" style="left:84%; top:6%; width:18px; height:18px; opacity:0.8; animation-delay:0.4s"></i>
+        <i class="star" style="left:90%; top:30%; width:30px; height:30px; opacity:1; animation-delay:1.0s"></i>
+        <i class="star" style="left:88%; top:58%; width:20px; height:20px; opacity:0.75; animation-delay:1.4s"></i>
+        <i class="star" style="left:92%; top:82%; width:26px; height:26px; opacity:0.9; animation-delay:2.0s"></i>
+
+        <!-- Planets (CSS-art) around border -->
+    <div class="planet p1" style="right:2.6vw; top:8vh;"><span class="ring"></span><span class="orbit"><span class="moon"></span></span></div>
+    <div class="planet p2" style="left:3.2vw; top:18vh;"><span class="ring"></span><span class="orbit"><span class="moon"></span></span></div>
+    <div class="planet p3" style="left:6vw; bottom:14vh;"><span class="ring"></span><span class="orbit"><span class="moon"></span></span></div>
+    <div class="planet p4" style="right:8vw; bottom:10vh;"><span class="ring"></span><span class="orbit"><span class="moon"></span></span></div>
+    <div class="planet p5" style="left:48vw; top:3vh;"><span class="ring"></span><span class="orbit"><span class="moon"></span></span></div>
+    </div>
+    <!-- Fiery sun in the top-right corner -->
+    <div class="sun" aria-hidden="true"></div>
+    <div class="container">
+        <div class="header">
+            <h1>🎯 My Evidence-Based Management Dashboard</h1>
+            <p>MGT357 - Fall 2025 | Portfolio Project</p>
+            
+            <div class="student-info">
+                <div><strong>Student:</strong> Ethan Benson</div>
+                <div><strong>Problem Focus:</strong> [How to improve communication in the work place]</div>
+                <div><strong>Repository:</strong> <a href="https://github.com/ethanbenson" target="_blank" rel="noopener" style="color: var(--color-gold);">https://github.com/ethanbenson</a></div>
+                <div><strong>Last Updated:</strong> <span id="last-updated">Loading</span></div>
+            </div>
+            
+            <div class="live-controls" aria-hidden="false">
+                <div class="live-badge" id="liveBadge" onclick="(function(){
+                    const badge = document.getElementById('liveBadge');
+                    const dot = badge.querySelector('.live-dot');
+                    if (window.intervalHandle) {
+                        window.stopContentPolling();
+                        dot.style.background = '#777';
+                        badge.title = 'Stopped live updates';
+                    } else {
+                        window.startContentPolling();
+                        dot.style.background = '#45ff7a';
+                        badge.title = 'Live updates running';
+                    }
+                })()">
+                    <span class="live-dot" id="liveDot"></span>
+                    <span id="liveLabel">LIVE</span>
+                </div>
+
+                <button class="refresh-btn" onclick="(function(){ if (typeof loadAllContent === 'function') { loadAllContent(); console.log('Manual refresh triggered'); } else { console.log('loadAllContent not available'); } })()">↻ Refresh</button>
+            </div>
+        </div>
+
+        <!-- Persistent Progress Indicator -->
+        <div class="progress-indicator">
+            <div class="progress-step pending" onclick="showTab(1)">🎯 Framework</div>
+            <div class="progress-step pending" onclick="showTab(2)">🔍 Evidence</div>
+            <div class="progress-step pending" onclick="showTab(3)">⚖️ Synthesis</div>
+            <div class="progress-step pending" onclick="showTab(4)">🚀 Application</div>
+            <div class="progress-step pending" onclick="showTab(5)">📊 Assessment</div>
+        </div>
+
+        <div class="tab-container">
+            <!-- Tab Navigation -->
+            <div class="tab-nav">
+                <button class="tab-button active" onclick="showTab(1)">🎯 Problem & Solution Framework</button>
+                <button class="tab-button" onclick="showTab(2)">🔍 Evidence Hub</button>
+                <button class="tab-button" onclick="showTab(3)">⚖️ Aggregation</button>
+                <button class="tab-button" onclick="showTab(4)">🚀 Application</button>
+                <button class="tab-button" onclick="showTab(5)">📊 Assessment</button>
+            </div>
+
+            <!-- Tab Content -->
+            <div class="tab-content">
+                <!-- TAB 1: Problem & Solution Framework -->
+                <div class="tab-panel active" id="tab-1">
+                    <h2>🎯 Problem & Solution Framework</h2>
+                    <p><strong>Following Module 2 Flowchart:</strong> Define the problem AND identify the preferred solution before collecting evidence.</p>
+                    
+                    <div class="milestone-tracker">
+                        <h4>📋 Milestone 1 Checklist (Due: Week 3)</h4>
+                        <ul class="checklist">
+                            <li>GitHub repository created and dashboard running</li>
+                            <li>Problem Definition completed using frameworks</li>
+                            <li>Stakeholder Analysis documented</li>
+                            <li>Success Criteria clearly defined</li>
+                            <li>Progress tracker updated</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="flowchart-step">
+                        STEP 1: ASK - What is the assumed problem?
+                    </div>
+                    
+                    <div class="content-file-preview" onclick="openContentFile('ask-problem-definition.txt')">
+                        <h4>📝 content/ask-problem-definition.txt</h4>
+                        <div class="edit-notice">🖊️ Click to edit this file in VS Code</div>
+                        <pre id="problem-definition-content">[This content will load from your .txt file]
+
+Use the X → Y Framework and PICOC Framework to define your management problem clearly.
+See the template file for detailed prompts and structure.</pre>
+                    </div>
+
+                    <div class="content-file-preview" onclick="openContentFile('ask-stakeholder-analysis.txt')">
+                        <h4>📝 content/ask-stakeholder-analysis.txt</h4>
+                        <div class="edit-notice">🖊️ Click to edit this file in VS Code</div>
+                        <pre id="stakeholder-analysis-content">[This content will load from your .txt file]
+
+Identify all stakeholders affected by your problem and potential solution.
+Consider internal and external stakeholders, their interests, and influence levels.</pre>
+                    </div>
+
+                    <div class="content-file-preview" onclick="openContentFile('ask-success-criteria.txt')">
+                        <h4>📝 content/ask-success-criteria.txt</h4>
+                        <div class="edit-notice">🖊️ Click to edit this file in VS Code</div>
+                        <pre id="success-criteria-content">[This content will load from your .txt file]
+
+Define specific, measurable criteria for success.
+How will you know if your evidence-based solution worked?</pre>
+                    </div>
+
+                    <div class="flowchart-step">
+                        STEP 2: ASK - What is the evidence for the assumed problem?
+                    </div>
+
+                    <div class="flowchart-step">
+                        STEP 3: ASK - What is the preferred solution?
+                    </div>
+
+                    <div class="flowchart-step">
+                        STEP 4: ASK - What is the evidence for the preferred solution?
+                    </div>
+
+                    <p><strong>Next Phase:</strong> Now that we have our problem framework defined, we move to the Evidence Hub to systematically collect and evaluate evidence from all four sources to answer Steps 2 & 4.</p>
+                </div>
+
+                <!-- TAB 2: Evidence Hub -->
+                <div class="tab-panel" id="tab-2">
+                    <h2>🔍 Evidence Hub</h2>
+                    <p><strong>Purpose:</strong> Systematically collect and critically evaluate evidence from all four sources.</p>
+
+                    <div class="milestone-tracker">
+                        <h4>📋 Milestone 2 & 3 Checkpoints</h4>
+                        <ul class="checklist">
+                            <li><strong>Milestone 2 (Week 6):</strong> Scientific & Practitioner Evidence Complete</li>
+                            <li><strong>Milestone 3 (Week 9):</strong> Organizational & Stakeholder Evidence Complete</li>
+                            <li>All acquisition methods documented</li>
+                            <li>Evidence sources collected and organized</li>
+                            <li>Quality appraisals completed for each evidence type</li>
+                        </ul>
+                    </div>
+
+                    <div style="background: rgba(212,175,55,0.06); padding: 20px; border-radius: 10px; margin: 20px 0;">
+                        <h4>🎯 Evidence Collection Goals:</h4>
+                        <ul>
+                            <li><strong>For Step 2:</strong> What evidence supports our assumed problem?</li>
+                            <li><strong>For Step 4:</strong> What evidence supports our preferred solution?</li>
+                        </ul>
+                    </div>
+
+                    <!-- Scientific Evidence Section -->
+                    <div class="evidence-section">
+                        <h3 class="evidence-type scientific">🔬 Scientific Evidence</h3>
+                        
+                        <div class="content-file-preview" onclick="openContentFile('evidence-scientific-methods.txt')">
+                            <h4>📝 content/evidence-scientific-methods.txt</h4>
+                            <div class="edit-notice">🖊️ Click to edit this file in VS Code</div>
+                            <pre>[Document your search strategy, databases used, keywords, and selection criteria]</pre>
+                        </div>
+
+                        <div class="content-file-preview" onclick="openContentFile('evidence-scientific-sources.txt')">
+                            <h4>📝 content/evidence-scientific-sources.txt</h4>
+                            <div class="edit-notice">🖊️ Click to edit this file in VS Code</div>
+                            <pre>[List and summarize the research studies, meta-analyses, and systematic reviews you found]</pre>
+                        </div>
+
+                        <div class="content-file-preview" onclick="openContentFile('evidence-scientific-appraisal.txt')">
+                            <h4>📝 content/evidence-scientific-appraisal.txt</h4>
+                            <div class="edit-notice">🖊️ Click to edit this file in VS Code</div>
+                            <pre>[Evaluate the quality, reliability, and relevance of your scientific evidence]</pre>
+                        </div>
+                    </div>
+
+                    <!-- Practitioner Evidence Section -->
+                    <div class="evidence-section">
+                        <h3 class="evidence-type practitioner">👔 Practitioner Evidence</h3>
+                        
+                        <div class="content-file-preview" onclick="openContentFile('evidence-practitioner-methods.txt')">
+                            <h4>📝 content/evidence-practitioner-methods.txt</h4>
+                            <div class="edit-notice">🖊️ Click to edit this file in VS Code</div>
+                            <pre>[Document how you collected practitioner insights, interviews, case studies]</pre>
+                        </div>
+
+                        <div class="content-file-preview" onclick="openContentFile('evidence-practitioner-sources.txt')">
+                            <h4>📝 content/evidence-practitioner-sources.txt</h4>
+                            <div class="edit-notice">🖊️ Click to edit this file in VS Code</div>
+                            <pre>[Summarize expert interviews, case studies, and professional experience]</pre>
+                        </div>
+
+                        <div class="content-file-preview" onclick="openContentFile('evidence-practitioner-appraisal.txt')">
+                            <h4>📝 content/evidence-practitioner-appraisal.txt</h4>
+                            <div class="edit-notice">🖊️ Click to edit this file in VS Code</div>
+                            <pre>[Assess the credibility and relevance of practitioner evidence]</pre>
+                        </div>
+                    </div>
+
+                    <!-- Organizational Evidence Section -->
+                    <div class="evidence-section">
+                        <h3 class="evidence-type organizational">🏢 Organizational Evidence</h3>
+                        
+                        <div class="content-file-preview" onclick="openContentFile('evidence-organizational-methods.txt')">
+                            <h4>📝 content/evidence-organizational-methods.txt</h4>
+                            <div class="edit-notice">🖊️ Click to edit this file in VS Code</div>
+                            <pre>[Document internal data collection methods and sources]</pre>
+                        </div>
+
+                        <div class="content-file-preview" onclick="openContentFile('evidence-organizational-sources.txt')">
+                            <h4>📝 content/evidence-organizational-sources.txt</h4>
+                            <div class="edit-notice">🖊️ Click to edit this file in VS Code</div>
+                            <pre>[Present internal data, KPIs, reports, and organizational studies]</pre>
+                        </div>
+
+                        <div class="content-file-preview" onclick="openContentFile('evidence-organizational-appraisal.txt')">
+                            <h4>📝 content/evidence-organizational-appraisal.txt</h4>
+                            <div class="edit-notice">🖊️ Click to edit this file in VS Code</div>
+                            <pre>[Evaluate the quality and limitations of organizational data]</pre>
+                        </div>
+                    </div>
+
+                    <!-- Stakeholder Evidence Section -->
+                    <div class="evidence-section">
+                        <h3 class="evidence-type stakeholder">👥 Stakeholder Evidence</h3>
+                        
+                        <div class="content-file-preview" onclick="openContentFile('evidence-stakeholder-methods.txt')">
+                            <h4>📝 content/evidence-stakeholder-methods.txt</h4>
+                            <div class="edit-notice">🖊️ Click to edit this file in VS Code</div>
+                            <pre>[Document stakeholder engagement methods, surveys, interviews]</pre>
+                        </div>
+
+                        <div class="content-file-preview" onclick="openContentFile('evidence-stakeholder-sources.txt')">
+                            <h4>📝 content/evidence-stakeholder-sources.txt</h4>
+                            <div class="edit-notice">🖊️ Click to edit this file in VS Code</div>
+                            <pre>[Summarize stakeholder feedback, surveys, and input]</pre>
+                        </div>
+
+                        <div class="content-file-preview" onclick="openContentFile('evidence-stakeholder-appraisal.txt')">
+                            <h4>📝 content/evidence-stakeholder-appraisal.txt</h4>
+                            <div class="edit-notice">🖊️ Click to edit this file in VS Code</div>
+                            <pre>[Assess the representativeness and reliability of stakeholder evidence]</pre>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TAB 3: Aggregation -->
+                <div class="tab-panel" id="tab-3">
+                    <h2>⚖️ Evidence Aggregation</h2>
+                    <p><strong>Synthesis Process:</strong> Weigh and combine evidence from multiple sources to form conclusions.</p>
+
+                    <div class="milestone-tracker">
+                        <h4>📋 Milestone 4 Checkpoint (Week 12)</h4>
+                        <ul class="checklist">
+                            <li>Evidence synthesis across all four types completed</li>
+                            <li>Solution design based on evidence analysis</li>
+                            <li>Implementation plan developed</li>
+                            <li>Risk assessment and mitigation strategies</li>
+                        </ul>
+                    </div>
+
+                    <div class="content-file-preview" onclick="openContentFile('synthesis-integration.txt')">
+                        <h4>📝 content/synthesis-integration.txt</h4>
+                        <div class="edit-notice">🖊️ Click to edit this file in VS Code</div>
+                        <pre id="evidence-synthesis-content">[Synthesize evidence from all four sources to reach evidence-based conclusions]
+
+Document areas of agreement, disagreement, and evidence quality.
+Weight the evidence and form recommendations.</pre>
+                    </div>
+                </div>
+
+                <!-- TAB 4: Application -->
+                <div class="tab-panel" id="tab-4">
+                    <h2>🚀 Application</h2>
+                    <p><strong>Implementation Planning:</strong> Put the evidence-based solution into practice.</p>
+
+                    <div class="content-file-preview" onclick="openContentFile('application-implementation.txt')">
+                        <h4>📝 content/application-implementation.txt</h4>
+                        <div class="edit-notice">🖊️ Click to edit this file in VS Code</div>
+                        <pre>[Create detailed implementation plan with timeline, resources, and stakeholder communication]</pre>
+                    </div>
+                </div>
+
+                <!-- TAB 5: Assessment -->
+                <div class="tab-panel" id="tab-5">
+                    <h2>📊 Assessment</h2>
+                    <p><strong>Continuous Improvement:</strong> Evaluate results and refine the approach.</p>
+
+                    <div class="milestone-tracker">
+                        <h4>📋 Final Submission Checklist (Week 16)</h4>
+                        <ul class="checklist">
+                            <li>Assessment framework completed</li>
+                            <li>Lessons learned documented</li>
+                            <li>Dashboard polished for portfolio</li>
+                            <li>Peer review feedback incorporated</li>
+                            <li>Final reflection on EBM process</li>
+                        </ul>
+                    </div>
+
+                    <div class="content-file-preview" onclick="openContentFile('assessment-monitoring.txt')">
+                        <h4>📝 content/assessment-monitoring.txt</h4>
+                        <div class="edit-notice">🖊️ Click to edit this file in VS Code</div>
+                        <pre>[Evaluate the effectiveness of your EBM process and solution]</pre>
+                    </div>
+
+                    <div style="text-align: center; margin-top: 30px;">
+                        <h3>🎉 EBM Cycle Complete!</h3>
+                        <p>Congratulations! You've built a professional Evidence-Based Management dashboard.</p>
+                        <div>
+                            <button class="btn" onclick="window.open('PROJECT_TRACKER.md')">📊 View Project Tracker</button>
+                            <button class="btn" onclick="showTab(1)">↻ Review Complete Process</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Set and update the Last Updated date daily (updates at midnight)
+        function formatDate(d) {
+            return d.toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' });
+        }
+
+        function setLastUpdatedToToday() {
+            const el = document.getElementById('last-updated');
+            if (!el) return;
+            const now = new Date();
+            el.textContent = formatDate(now);
+
+            // Calculate ms until next local midnight
+            const tomorrow = new Date(now);
+            tomorrow.setDate(now.getDate() + 1);
+            tomorrow.setHours(0,0,0,0);
+            const msUntilMidnight = tomorrow - now;
+
+            // Schedule the first update at midnight, then every 24h
+            setTimeout(function() {
+                setLastUpdatedToToday();
+                setInterval(setLastUpdatedToToday, 24 * 60 * 60 * 1000);
+            }, msUntilMidnight + 1000); // add 1s buffer
+        }
+
+    // Initialize content and last-updated
+    setLastUpdatedToToday();
+
+    // Content file loading functionality
+        function loadContentFiles() {
+            // This function would load content from .txt files
+            // For now, it shows placeholder content
+            console.log('Content files would be loaded here');
+        }
+
+        // Function to simulate opening content files in VS Code
+        function openContentFile(filename) {
+            alert(`In VS Code, you would open: content/${filename}\n\nThis is where you'll edit your content. Use GitHub Copilot to help with writing and organization!`);
+        }
+
+        // Tab Navigation Functionality
+        function showTab(tabNumber) {
+            // Hide all tab panels
+            const panels = document.querySelectorAll('.tab-panel');
+            panels.forEach(panel => panel.classList.remove('active'));
+            
+            // Remove active class from all tab buttons
+            const buttons = document.querySelectorAll('.tab-button');
+            buttons.forEach(button => button.classList.remove('active'));
+            
+            // Show the selected tab panel
+            document.getElementById(`tab-${tabNumber}`).classList.add('active');
+            
+            // Add active class to the clicked button
+            buttons[tabNumber - 1].classList.add('active');
+            
+            // Update progress indicator
+            updateProgressIndicator(tabNumber);
+        }
+        
+        // Update Progress Indicator based on current tab
+        function updateProgressIndicator(currentTab) {
+            const progressSteps = document.querySelectorAll('.progress-step');
+            
+            progressSteps.forEach((step, index) => {
+                step.classList.remove('completed', 'active', 'pending');
+                
+                if (index + 1 < currentTab) {
+                    step.classList.add('completed');
+                } else if (index + 1 === currentTab) {
+                    step.classList.add('active');
+                } else {
+                    step.classList.add('pending');
+                }
+            });
+        }
+
+        // Initialize dashboard
+        document.addEventListener('DOMContentLoaded', function() {
+            loadContentFiles();
+            updateProgressIndicator(1);
+            // Ensure last-updated runs when page is ready
+            setLastUpdatedToToday();
+            // Initialize live badge color based on content polling state
+            setTimeout(function(){
+                try {
+                    const dot = document.querySelector('.live-dot');
+                    if (!dot) return;
+                    if (typeof window.intervalHandle !== 'undefined' && window.intervalHandle) {
+                        dot.style.background = '#45ff7a';
+                        document.getElementById('liveBadge').title = 'Live updates running';
+                    } else {
+                        dot.style.background = '#777';
+                        document.getElementById('liveBadge').title = 'Live updates stopped';
+                    }
+                } catch(e) { /* ignore */ }
+            }, 120);
+        });
+    </script>
+    <script src="content-loader.js"></script> 
+</body>
+</html>

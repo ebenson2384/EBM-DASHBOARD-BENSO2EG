@@ -1,0 +1,23 @@
+# Node / JS artifacts (not required but safe to ignore if you add tooling)
+node_modules/
+npm-debug.log
+yarn-error.log
+package-lock.json
+pnpm-lock.yaml
+
+# macOS
+.DS_Store
+
+# Editor folders
+.vscode/
+.idea/
+
+# Build artifacts
+dist/
+build/
+
+# OS generated files
+Thumbs.db
+
+# Optional: private assets
+assets/secrets/

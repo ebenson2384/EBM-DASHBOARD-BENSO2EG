@@ -1,0 +1,33 @@
+# Milestone 1 — Pulse Survey (2–4 minutes)
+
+Purpose: Quick baseline measurement of communication clarity, meeting effectiveness, and manager support for improved practices.
+
+Instructions for distribution: Send org-wide (or to pilot teams) with anonymous responses; target 30–60% response rate for meaningful guidance.
+
+Survey items (Likert 1–5 unless noted)
+1. I understand the priorities for my team. (1=Strongly disagree, 5=Strongly agree)
+2. Meetings I attend have a clear agenda. (1–5)
+3. Meetings I attend end with clear next steps and assigned owners. (1–5)
+4. I spend a reasonable amount of time in meetings each week. (1–5)
+5. My manager communicates decisions clearly. (1–5)
+6. I can usually find written notes or decisions after a meeting (shared doc, email, or tool). (1–5)
+7. I can complete focused work without frequent interruption. (1–5)
+8. How many hours did you spend in meetings last week? (open numeric)
+9. Which meeting types are most unproductive? (multiple select / short list)
+10. Optional comment: Please share an example of a meeting that worked well or one that did not. (open)
+
+Demographics (optional)
+- Role / department (dropdown)
+- Manager / individual contributor (select)
+
+Analysis guidance
+- Calculate composite communication satisfaction by averaging items 1–7.
+- Use item 8 to triangulate meeting hours baseline.
+- Code open comments to extract recurring themes and examples.
+
+Confidentiality
+- Keep responses anonymous for candid feedback; share aggregated themes only.
+
+---
+
+If you want, I can convert this into a Google Form or a short MS Forms template and provide shareable links/text for HR to paste directly.

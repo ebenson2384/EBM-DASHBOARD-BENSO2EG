@@ -1,0 +1,40 @@
+# Milestone 1 — Solution Options
+
+This file presents two coherent solution options to address the communication problem identified in the dashboard ("How to improve communication in the work place"). Each option includes a short description, rationale, expected outcomes, resources required, risks, and a draft implementation outline.
+
+Option A — Meeting Norms + Manager Coaching (Recommended when the main pain comes from inefficient synchronous meetings and unclear manager expectations)
+- Description: Introduce a set of company-wide meeting norms (agenda-first meetings, timeboxing, clear roles, and standing notes) combined with a targeted manager coaching program (1-day workshop + follow-up coaching) to improve meeting design, decision clarity, and follow-through.
+- Rationale: Many communication problems stem from inefficient meetings and inconsistent manager behavior. Norms plus coaching change both process and leadership practice.
+- Expected outcomes: Reduced meeting hours (~20%), improved clarity in decisions, increased employee satisfaction with communication, faster task handoffs.
+- Key activities and timeline (0–3 months):
+  1. Design meeting norms (Week 1)
+  2. Pilot with 2–3 teams (Weeks 2–4)
+  3. Manager workshop (Week 4)
+  4. Rollout & toolkit (Weeks 5–8)
+  5. Monitor & iterate (Weeks 9–12)
+- Resources: HR + L&D to run workshops, time allocation for managers, simple templates and an internal comms page.
+- Risks: Manager resistance; perceived additional work; patchy adoption.
+- Mitigations: Sponsor from senior leadership; clear short pilot with quick wins; manager coaching follow-up.
+
+Option B — Async Tooling + Communication Guidelines (Recommended when the problem is poor asynchronous practices and missing tooling conventions)
+- Description: Adopt or better-configure an async communication platform (e.g., Slack guidelines, threads, shared docs, and a central async playbook) and provide team-level training for async-first norms.
+- Rationale: Async-first practices reduce unnecessary meetings, allow flexible working, and create persistent, searchable context.
+- Expected outcomes: Faster response clarity on critical items, fewer interrupt-driven meetings, better documented decisions.
+- Key activities and timeline (0–3 months):
+  1. Audit current tools & patterns (Week 1)
+  2. Define async playbook & channel conventions (Weeks 2–3)
+  3. Team trainings & champions (Weeks 4–6)
+  4. Tool configuration (e.g., channels, policies) (Weeks 4–6)
+  5. Monitor & iterate (Weeks 7–12)
+- Resources: IT for tool configuration, comms for playbook dissemination, training time.
+- Risks: Tool fatigue; over-reliance on messages instead of decisions; inconsistent use.
+- Mitigations: Clear playbook, champions, and measurement focused on quality of messages and decision rates.
+
+Comparison and recommendation
+- If most complaints are about long, unproductive meetings and unclear manager expectations, choose Option A.
+- If the organization lacks clear async norms or tools are misused, choose Option B.
+- A blended approach is common: pilot Option A in teams with heavy meeting loads and Option B in distributed teams.
+
+---
+
+"Next steps": choose Option A, Option B, or 'Blend' and I will produce the full Milestone 1 documents (Problem Definition, Stakeholder Analysis, Success Criteria) adapted to the chosen option and populate the `content/` files.

@@ -1,0 +1,126 @@
+# Scientific Evidence — Methods & Acquisition Strategy
+
+This document provides a reproducible template for searching, selecting, and appraising scientific evidence relevant to your problem and proposed solutions.
+
+## 1) Research Question (PICO-ish)
+- Population: Employees in small-to-medium enterprises (SMEs) with identified communication challenges
+- Intervention/Exposure: Communication Skills Training (CST) programs, peer coaching, or structured feedback systems
+- Comparator: No intervention or alternative training approaches
+- Outcomes: Communication competency, self-efficacy, employee satisfaction, performance metrics
+
+**Primary research question:** What are the main barriers (cultural, linguistic, hierarchical, technological) to effective communication, and how do they affect employee performance and satisfaction?
+
+**Secondary question:** What are the most effective communication skills training (CST) methods for improving employee competence, self-efficacy, and empathy?
+
+---
+
+## 2) Search strategy
+
+### Databases (recommend start list)
+- PubMed/MEDLINE
+- PsycINFO
+- Business Source Complete / ABI/INFORM
+- Google Scholar (broad sweep)
+- Cochrane Library (reviews)
+- JSTOR / SSRN for complementary literature
+
+### Example search strings
+- ("communication skills" OR "communication training" OR "interpersonal communication") AND ("workplace" OR "employee" OR "organizational")
+- ("communication training" AND "randomized")
+
+### Keywords and search terms
+
+#### Primary keywords
+- Active listening
+- Communication styles
+- Leadership communication
+#### Secondary keywords
+- Conflict resolution
+- Feedback mechanisms
+- Communication barriers
+#### Example Boolean combinations
+- ("communication skills" OR "communication training") AND ("workplace" OR "employee")
+- ("communication training" AND (randomized OR trial OR intervention))
+- ("peer coaching" OR "feedback system") AND ("employee" OR "staff")
+
+### Filters to apply
+- Date range: last 10 years (adjust if you need historical context)
+- Language: English (expand if you read other languages)
+- Study types: randomized controlled trials, quasi-experimental, cohort, systematic reviews
+
+---
+
+## 3) Selection criteria
+
+### Inclusion
+- Empirical studies evaluating communication interventions in workplace settings
+- Adult working populations (exclude child/education settings unless directly relevant)
+- Studies reporting at least one quantitative outcome (competence, satisfaction, retention, productivity)
+
+### Exclusion
+- Opinion pieces, editorials, narrative essays without empirical data
+- Studies in clinical contexts where findings are not transferable to workplace settings
+
+---
+
+## 4) Screening & extraction (process)
+
+Recommended workflow:
+1. Run searches and export results to your reference manager (Zotero, Mendeley, EndNote).
+2. Remove duplicates.
+3. Title/abstract screen against inclusion/exclusion criteria (track reasons for exclusion).
+4. Retrieve full texts for potentially eligible papers.
+5. Extract key data into a spreadsheet or extraction form.
+
+### Suggested extraction fields
+- Citation
+- Country / setting
+- Study design
+- Sample size and characteristics
+- Intervention details (duration, modality)
+- Comparator
+- Outcome measures and instruments
+- Effect sizes / key results
+- Risk of bias / limitations
+
+---
+
+## 5) Quality appraisal
+
+Use a simple checklist per study (adapt for design):
+- Was allocation/randomization adequate? (if RCT)
+- Was there blinding where possible?
+- Was attrition reported and handled appropriately?
+- Were outcomes measured with validated instruments?
+- Were analyses appropriate and clearly reported?
+
+Provide a short overall quality rating (High / Moderate / Low) with a brief justification.
+
+---
+
+## 6) Synthesis and reporting
+
+- Create a summary table listing each included study and the key outcomes.
+- If meta-analysis is not feasible, provide a narrative synthesis structured by intervention type and outcome domain.
+- Highlight consistent effects and note heterogeneity and limitations.
+
+---
+
+## 7) Documentation (example row)
+
+**Date:** 2025-09-18
+**Database:** PubMed
+**Search string:** ("communication training" AND "workplace") AND (randomized OR trial)
+**Results:** 1,432
+**Notes:** After title/abstract screen, 47 potentially relevant; 12 full texts retrieved.
+
+---
+
+## 8) Tips & resources
+- Use university library access for subscription databases.
+- Contact a research librarian for advanced search strategies.
+- Consider limiting to higher-quality designs when drawing practice recommendations.
+
+---
+
+If you'd like, I can: (a) populate this file with results from an initial quick Google Scholar sweep (summary of top 5 papers), or (b) add a checklist UI to the dashboard that lets you mark screening progress. Tell me which and I'll implement it next.

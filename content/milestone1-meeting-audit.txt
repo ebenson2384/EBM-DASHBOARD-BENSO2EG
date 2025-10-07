@@ -1,0 +1,34 @@
+# Milestone 1 — Meeting Audit Checklist
+
+Purpose: Rapid checklist to assess meeting design quality and decision documentation for recurring meetings.
+
+For each sampled meeting, record:
+- Meeting name / recurring series
+- Organizer / team
+- Frequency and typical duration
+- Number of attendees
+- Was an agenda shared in advance? (Yes / No)
+- Was the meeting timeboxed? (Yes / No)
+- Were roles defined (facilitator, note-taker)? (Yes / No)
+- Was a clear decision or next step recorded? (Yes / No)
+- Was an owner assigned for next steps? (Yes / No)
+- Was there a shared record (notes, doc, ticket) of decisions? (Yes / No)
+- Follow-up actions completed on time? (Yes / No / Not applicable)
+- Auditor notes (free text):
+  - Main themes: unnecessary attendees, lack of decisions, rehashing prior topics, unclear owners
+
+Sampling guidance
+- Audit 10–20 recurring meetings across different levels (senior leadership, middle-management, operational teams)
+- Prioritize high-frequency meetings and cross-functional meetings
+
+Analysis
+- Calculate % of meetings with agenda, % with decisions recorded, % with owners assigned
+- Identify common patterns (teams with low scores, meeting types that are poor candidates for synchronous time)
+
+Recommendations
+- For meeting series that fail the checklist, recommend either redesign (agenda, owners, timebox) or convert to async update.
+- Use audit results to select pilot teams.
+
+---
+
+I can also produce a spreadsheet template (CSV) to collect these audit fields for easier aggregation.

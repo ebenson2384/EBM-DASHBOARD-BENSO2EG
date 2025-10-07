@@ -1,0 +1,55 @@
+
+# Problem Definition Framework
+
+## X → Y Framework
+### Current State (X) 
+Employees are struggling to express their feelings which is leading to wokrplace hostility. 
+
+### Desired State (Y) 
+The goal is to achieve an open and communicative work environment. We want employees to feel like they can address issues within the workplace when they feel relevant. We want to encourage open mindedness, creativity, and honesty.
+
+## PICOC Framework
+### Population (P)
+ Clear, efficient meeting practices and consistent manager behaviors that reduce unnecessary meeting time, increase decision clarity, and improve perceived communication quality across teams.
+ Employees should spend at least 20% less time in meetings and report improved communication clarity in follow-up surveys.
+[Identify the specific group(s) experiencing the problem]
+
+### Intervention (I)
+All employees will engage in meetings, with higher level employees, to survey employee satisfaction. 
+
+### Comparison (C)
+Instead of implementing meetings as often, another alternative could be a weekly survey reveiwing performance and mood.
+
+### Outcomes (O)
+ Better understanding of what employees might need aswell as continuous updates on employee mentality.
+
+### Context (C)
+The context of this problem is primarily relevant within an office setting where a boss may be dealing with employee dissatisfaction.
+
+## Clear Problem Statement
+Dealing with a lack of employee engagement and satisfaction is an issue that has been developed from a lack of communication within the workplace.
+
+## Why This Problem Matters
+Without an effective level of communication in the workplace, this could lead to a lack of employee satisfaction. This could lead to decreased productivity and happiness so steps must be taken to prevent this.
+
+### Stakeholder Impact
+ Excess meeting time reduces capacity for focused work and slows delivery.
+
+### Strategic Alignment
+ Managers: Encourage open communication between co-workers and upper management.
+ Front-line employees: Begin communicating feelings about work structure and quality of life within the workplace.
+ Senior leaders: Less of a responsibility than the managers but necessary for them to be on board and encourage workplace autonomy.
+
+## Evidence Questions to Explore
+ Improving meeting efficiency and manager practices supports organizational goals to increase delivery velocity, improve employee engagement, and reduce wasted time.
+- What evidence shows this problem exists?
+- How widespread is this problem?
+- What are the root causes?
+
+### For the Solution (Step 4)
+- What evidence supports our preferred solution?
+- Has this solution worked in similar contexts?
+- What are the potential risks and benefits?
+- How do employees react to increased meetings?
+
+

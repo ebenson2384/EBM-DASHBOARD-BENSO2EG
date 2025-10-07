@@ -1,0 +1,95 @@
+# Success Criteria Definition — Option A (Meeting Norms + Manager Coaching)
+
+## SMART Success Criteria
+
+### Criterion 1: Increase communication satisfaction (Primary Outcome)
+- **Specific:** Improve the internal communication satisfaction score measured by pulse survey items related to meeting effectiveness and clarity.
+- **Measurable:** Aim to increase the composite score from baseline (example: 55/100) to 75/100.
+- **Achievable:** Pilot with 2–3 teams and roll out organization-wide; realistic with manager coaching and playbook.
+- **Relevant:** Directly addresses meeting quality, manager behaviors, and clarity.
+- **Time-bound:** Achieve target within 6 months of full rollout.
+
+### Criterion 2: Increase average monthyl meeting hours (Secondary Outcome)
+- **Specific:** Increase average monthly calendar time spent in meetings per employee.
+- **Measurable:** Increase by 20% from baseline (e.g., 9 hours/month → 12 hours/month).
+- **Achievable:** Through norms, agendas, and timeboxing; pilot shows quick wins.
+- **Relevant:** Creates time to imporve communication and improve autonomy.
+- **Time-bound:** 3 months to realize initial improvements; maintain/improve by 6 months.
+
+### Criterion 3: Improve decision clarity and follow-through (Additional Outcome)
+- **Specific:** Increase the share of meetings with an explicit decision and an assigned owner.
+- **Measurable:** Target 80% of recurring meetings to include a documented decision/next-step owner.
+- **Achievable:** Use meeting templates and manager coaching.
+- **Relevant:** Reduces repeated discussions and increases accountability.
+- **Time-bound:** 3 months for pilot teams, 6 months org-wide.
+
+## Measurement Framework
+
+### Quantitative Metrics
+- Survey: communication satisfaction composite (baseline & follow-ups)
+- Calendar analytics: average meeting hours per person per week
+- Meeting audit: % of meetings with agenda, documented decisions, and assigned owners
+
+### Qualitative Indicators
+- Interview themes reporting improved clarity
+- Manager self-reports of reduced coordination time
+- Participant feedback from workshops
+
+## Baseline Measurements
+- Current State Metrics (examples — replace with org values):
+	- Communication satisfaction: 55/100
+	- Average meeting hours per week: 12h
+	- % meetings with documented decisions: 30%
+
+### Data Collection Plan
+- Week 1: Run baseline pulse survey and calendar audit
+- Weeks 2–4: Interviews and meeting audits
+- Ongoing: Weekly measurement for pilot teams; monthly rollout metrics after expansion
+
+## Success Thresholds
+### Minimum Acceptable Improvement
+- Communication satisfaction increases by at least 10 points (55 → 65) within 6 months.
+
+### Target Performance Level
+- Communication satisfaction reaches 75/100 and meeting hours reduce by 20% within 6 months.
+
+### Stretch Goal
+- Communication satisfaction ≥ 80/100 and meeting hours reduce by ≥30% within 6 months.
+
+## Stakeholder-Specific Success Criteria
+### Management Success Measures
+- Visible reduction in coordination time and improved on-time delivery for prioritized projects.
+
+### Employee Success Measures
+- Reported reduction in meeting overload and higher perceived clarity in follow-ups.
+
+### Customer Success Measures
+- Faster response times for customer queries tied to clearer internal coordination.
+
+## Risk Indicators
+- Persistent high meeting hours after pilot
+- Low workshop attendance or manager engagement
+- Negative feedback about increased workload for workshop activities
+
+### Red Flags
+- Less than 5% reduction in meeting hours at pilot completion
+- No change in survey scores after first 3 months
+
+### Mitigation Triggers
+- Pivot to more targeted coaching; adjust workshop format or mandate participation for managers
+
+## Timeline for Assessment
+### Short-term (30-90 days)
+- Pilot workshops delivered; initial meeting hours reduction; early participant feedback collected
+
+### Medium-term (3-6 months)
+- Rollout to additional teams; measurable improvements in survey scores and meeting hours
+
+### Long-term (6-12 months)
+- Sustained norms and leadership behaviors, organization-wide measurement and governance
+
+## Reporting Framework
+- Dashboard metrics: communication satisfaction, meeting hours, % meetings with decisions
+- Regular Reports: monthly pilot reports and executive summary at 3 and 6 months
+- Milestone Reviews: 6-month formal evaluation and decision on broader embedding
+

@@ -1,0 +1,74 @@
+# Stakeholder Analysis
+# Identify and analyze all parties affected by your problem and solution
+
+## Internal Stakeholders
+
+### Senior Management
+- **Interest in Problem:** A lack of communication and autonomy in the workplace can reduce productivty among workers decreasing the overall performance of the company.
+- **Interest in Solution:** This would lead to a better understanding of how employees want to be treated and what factors will increase motivation.
+- **Influence Level:** High level of influence
+- **Support Level:** Likely supporter
+### Middle Management
+- **Interest in Problem:** Middle managers should have significant interest in solving this issue as the performance of their subordinates directly speaks to their abilities as a manager.
+- **Interest in Solution:** They would gain increased motivation and decreased static among subordinates.
+- **Influence Level:** These middle managers have the second highest level of influence as they will be the ones directly implementing the solution.
+- **Support Level:** They are likely a supporter.
+### Employees/Staff
+- **Interest in Problem:** The interest of employees is to improve their work life. By opening up to solve this issue 
+- **Interest in Solution:** By participating in more meetings or regular surveys, the employees gain the ability to express potential concerns. This allows them to have more influence on the quality of work.
+- **Influence Level:** The employees have the highest level of influence on the solution's effect since it will be up to them to use these opportunities to communicate concerns and desires.
+- **Support Level:** The employees will be in great support of this solution because it gives them a voice.
+
+## External Stakeholders
+
+### Customers/Clients
+- **Interest in Problem:** Customers will be impacted minimally because they will not directly deal with employees behind the scenes. However, they will benefit from the increased overall productivty of the company.
+- **Interest in Solution:** The customers will gain easier transactions with the company.
+- **Influence Level:** They have low influence on the solution. Their influence is shown through feedback/reviews.
+- **Support Level:** Their level of support will be neutral.
+
+### Suppliers/Partners
+- **Interest in Problem:** Business partners will benefit from the increased communication as our operations will flow more efficiently.
+- **Interest in Solution:** The partners will gain increased productivity on our end.
+- **Influence Level:** They will have low influence on the solution as the problem stems from internal issues.
+- **Support Level:** Their support will remain neutral or slightly positive as they will benefit from our increased productivity
+
+### Regulatory Bodies
+- **Interest in Problem:** Any regulatory bodies will be interested in creating a solution for the problem at hand because it improves the quality of life throughout the work community.
+- **Interest in Solution:** The solution proposed will remain in compliance with all company requirements.
+- **Influence Level:** They have a medium level of influence becasue their word carries weight but will likley not be directly involved in the solution.
+- **Support Level:** Their response to the solution will be positive and in full support.
+
+### Community/Society
+- **Interest in Problem:** The community surrounding the company will be impacted minimally by this organizational change.
+- **Interest in Solution:** There will be minimal interest in the solution as they will likely not witness a difference.
+- **Influence Level:** They have a low influence level.
+- **Support Level:** Low interest in problem and solution.
+
+## Stakeholder Engagement Strategy
+
+### High Influence, High Interest (Manage Closely)
+Middle Managers and Employees/Staff
+
+### High Influence, Low Interest (Keep Satisfied)
+Senior Management
+
+### Low Influence, High Interest (Keep Informed)
+Suppliers/Partners
+
+### Low Influence, Low Interest (Monitor)
+Customers
+
+## Key Stakeholder Insights for Evidence Collection
+
+### Who to Interview/Survey
+Employees and Middle Managers
+
+### What Questions to Ask
+Do you see improved communication as a benefit to your workplace?
+Would having designated time to give/receive feedback be beneficial to your work experience?
+If relationships within the office were stronger do you think your performance would improve?
+
+### How to Engage
+Can contact through email, phone call, in-office visit, or even meetings to assess opinions surrounding problem/solution.
+

@@ -1,0 +1,49 @@
+# Milestone 1 — Evidence Collection Plan
+
+Purpose
+Collect focused, pragmatic evidence to confirm the communication problem, measure baselines, and evaluate the chosen solution.
+
+Key Questions
+- Does the problem exist (scope and severity)?
+- What are the root causes (meetings, tooling, manager behavior)?
+- Which metrics best capture improvement?
+
+Data Sources & Methods
+1. Quantitative
+  - Internal employee survey: 5–7 items focused on communication clarity, meeting effectiveness, and responsiveness. Sample: all staff (or representative sample of ~30–50% for large orgs).
+  - System metrics: meeting hours per person (calendar analytics), email/slack response times (if available), number of threads vs. decisions logged.
+  - Productivity KPIs (if applicable): delivery lead time, incident resolution time.
+
+2. Qualitative
+  - 8–12 semi-structured interviews with a cross-section of staff (senior leaders, middle managers, front-line employees).
+  - 2–3 focus groups (30–60 minutes) for deeper themes.
+  - Review of recent meeting notes, decisions, and project communications.
+
+Instruments & Templates
+- Short Survey (Likert 1–5 + open comment)
+- Interview guide (questions by stakeholder type)
+- Meeting audit checklist (agenda presence, stated outcomes, owner, follow-ups)
+
+Sampling & Timeline
+- Week 1: Launch brief survey and calendar/tool audit
+- Weeks 2–3: Conduct interviews and focus groups
+- Week 3–4: Compile baseline metrics and draft findings
+
+Roles & Responsibilities
+- Owner: Project lead (you or delegate)
+- HR: survey distribution and confidentiality
+- IT: export calendar/communication metrics (if available)
+- L&D: support interviews/focus groups
+
+Analysis & Deliverables
+- Baseline summary (numbers + verbatim themes)
+- Short evidence memo answering: Is the problem real? How severe? Likely root causes?
+- Updated Milestone 1 documents with evidence footnotes and recommended solution option.
+
+Ethics & Confidentiality
+- Anonymize interview notes and survey responses
+- Share high-level themes with stakeholders; reserve sensitive quotes for private review
+
+---
+
+After you pick a solution option, I will tailor the survey and interview guides to focus on the causes relevant to that option and produce files you can copy into your project's `content/` folder or send to HR/IT.
