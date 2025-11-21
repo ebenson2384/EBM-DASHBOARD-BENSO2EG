@@ -3,16 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EBM Dashboard: Communication → Engagement → Performance | MGT357 - Fall 2025</title>
-    <script src="dashboard_content.js"></script>
+    <title>My EBM Dashboard | MGT357 - Fall 2025</title>
+    <!-- Theme updated: Purple / Gold / Black palette applied on 2025-09-16 -->
     <style>
-        /* === CSS CUSTOM PROPERTIES === */
+        /* === CSS CUSTOM PROPERTIES (Purple / Gold / Black) === */
         :root {
-            --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            --tab-active: #2ecc71;
-            --tab-inactive: #95a5a6;
-            --step-green: #27ae60;
-            --step-blue: #3498db;
+            --color-purple: #6f42c1; /* primary purple */
+            --color-purple-dark: #4b2d8f;
+            --color-gold: #d4af37; /* accent gold */
+            --color-gold-2: #b9892b;
+            --color-black: #0b0b0b; /* deep black */
+            --primary-gradient: linear-gradient(135deg, var(--color-purple) 0%, var(--color-black) 100%);
+            --tab-active: var(--color-gold);
+            --tab-inactive: #2c2c2c;
+            --step-green: var(--color-purple);
+            --step-blue: var(--color-gold);
             --border-radius: 15px;
             --transition-speed: 0.3s;
         }
@@ -28,19 +33,27 @@
             background: var(--primary-gradient);
             min-height: 100vh;
             padding: 20px;
+            color: #eee;
         }
 
+        /* NOTE: background uses an image file at assets/lebron.jpg - ensure you have the right to use this image.
+           If you don't want to store the image locally, provide a licensed external URL and update the path below.
+        */
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            background: white;
+            /* dark overlay + background image */
+            background: linear-gradient(rgba(11,11,11,0.62), rgba(11,11,11,0.62)), url('assets/lebron.jpg');
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
             border-radius: var(--border-radius);
-            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.6);
             overflow: hidden;
         }
 
         .header {
-            background: linear-gradient(135deg, #2c3e50, #3498db);
+            background: linear-gradient(135deg, var(--color-black), var(--color-purple));
             color: white;
             padding: 30px;
             text-align: center;
@@ -53,11 +66,11 @@
 
         .header p {
             font-size: 1.2em;
-            opacity: 0.9;
+            opacity: 0.95;
         }
 
         .student-info {
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.03);
             padding: 15px;
             margin-top: 20px;
             border-radius: 10px;
@@ -65,13 +78,14 @@
             grid-template-columns: 1fr 1fr;
             gap: 10px;
             font-size: 0.9em;
+            color: #ddd;
         }
 
         /* === SIMPLE TAB SYSTEM === */
         .tab-nav {
             display: flex;
-            background: #ecf0f1;
-            border-bottom: 3px solid #bdc3c7;
+            background: #121212;
+            border-bottom: 3px solid #272727;
         }
 
         .tab-button {
@@ -85,7 +99,7 @@
             font-size: 1.1em;
             transition: all var(--transition-speed);
             border: none;
-            border-right: 2px solid white;
+            border-right: 2px solid rgba(255,255,255,0.03);
         }
 
         .tab-button:last-child {
@@ -93,14 +107,15 @@
         }
 
         .tab-button:hover {
-            background: #7f8c8d;
+            background: var(--color-purple-dark);
             transform: translateY(-2px);
         }
 
         .tab-button.active {
             background: var(--tab-active);
+            color: #0b0b0b;
             transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(46, 204, 113, 0.3);
+            box-shadow: 0 5px 18px rgba(212,175,55,0.2);
         }
 
         .tab-content {
@@ -112,6 +127,7 @@
             display: none;
             padding: 40px;
             animation: fadeIn 0.3s ease-in;
+            color: #eaeaea;
         }
 
         .tab-panel.active {
@@ -132,12 +148,12 @@
             margin: 15px 0;
             font-weight: bold;
             text-align: center;
-            box-shadow: 0 4px 15px rgba(39, 174, 96, 0.3);
+            box-shadow: 0 4px 18px rgba(79, 36, 140, 0.25);
         }
 
         .decision-diamond {
             background: var(--step-blue);
-            color: white;
+            color: #0b0b0b;
             padding: 15px 25px;
             border-radius: 10px;
             margin: 15px 0;
@@ -152,8 +168,8 @@
         }
 
         .content-file-preview {
-            background: #f8f9fa;
-            border: 2px dashed #bdc3c7;
+            background: #0d0d0e;
+            border: 2px dashed #333;
             border-radius: 10px;
             padding: 20px;
             margin: 20px 0;
@@ -161,23 +177,24 @@
             font-size: 0.9em;
             cursor: pointer;
             transition: all 0.3s ease;
+            color: #ddd;
         }
 
         .content-file-preview:hover {
-            border-color: #3498db;
-            background: #f0f8ff;
+            border-color: var(--color-gold);
+            background: #0b0b0c;
         }
 
         .content-file-preview h4 {
-            color: #2c3e50;
+            color: var(--color-gold);
             margin-bottom: 10px;
             font-family: 'Segoe UI', sans-serif;
         }
 
         .edit-notice {
-            background: #fff3cd;
-            border: 1px solid #ffeaa7;
-            color: #856404;
+            background: rgba(212,175,55,0.08);
+            border: 1px solid rgba(212,175,55,0.14);
+            color: var(--color-gold);
             padding: 10px;
             border-radius: 5px;
             margin: 10px 0;
@@ -193,16 +210,16 @@
             font-weight: bold;
         }
 
-        .scientific { background: #e74c3c; }
-        .practitioner { background: #f39c12; }
-        .organizational { background: #27ae60; }
-        .stakeholder { background: #9b59b6; }
+        .scientific { background: var(--color-purple); }
+        .practitioner { background: var(--color-gold); color: #0b0b0b; }
+        .organizational { background: #1a1a1a; }
+        .stakeholder { background: var(--color-purple-dark); }
 
         .evidence-section {
             margin: 40px 0;
             padding: 25px;
-            border-left: 5px solid #ddd;
-            background: #fafafa;
+            border-left: 5px solid #222;
+            background: #0f0f10;
             border-radius: 10px;
         }
 
@@ -222,13 +239,13 @@
             display: flex;
             justify-content: space-between;
             padding: 20px;
-            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            background: linear-gradient(135deg, #0f0f10, #1a1a1a);
             margin: 0;
-            border-bottom: 3px solid #dee2e6;
+            border-bottom: 3px solid #222;
             position: sticky;
             top: 0;
             z-index: 100;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.6);
         }
 
         .progress-step {
@@ -242,25 +259,26 @@
             transition: all var(--transition-speed);
             position: relative;
             cursor: pointer;
+            color: #eee;
         }
 
         .progress-step.completed {
-            background: linear-gradient(135deg, #27ae60, #2ecc71);
+            background: linear-gradient(135deg, var(--color-purple-dark), var(--color-purple));
             color: white;
             transform: scale(1.05);
-            box-shadow: 0 4px 15px rgba(46, 204, 113, 0.3);
+            box-shadow: 0 4px 15px rgba(75,45,143,0.25);
         }
 
         .progress-step.active {
-            background: linear-gradient(135deg, #3498db, #74b9ff);
-            color: white;
+            background: linear-gradient(135deg, var(--color-gold), var(--color-gold-2));
+            color: #0b0b0b;
             transform: scale(1.05);
-            box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+            box-shadow: 0 4px 15px rgba(212,175,55,0.18);
         }
 
         .progress-step.pending {
-            background: #bdc3c7;
-            color: white;
+            background: #2b2b2b;
+            color: #ddd;
         }
 
         .progress-step::after {
@@ -278,15 +296,15 @@
         }
 
         .progress-step.completed::after {
-            border-left-color: #27ae60;
+            border-left-color: var(--color-purple);
         }
 
         .progress-step.active::after {
-            border-left-color: #3498db;
+            border-left-color: var(--color-gold);
         }
 
         .progress-step.pending::after {
-            border-left-color: #bdc3c7;
+            border-left-color: #2b2b2b;
         }
 
         .progress-step:last-child::after {
@@ -294,8 +312,8 @@
         }
 
         .btn {
-            background: linear-gradient(135deg, #3498db, #2980b9);
-            color: white;
+            background: linear-gradient(135deg, var(--color-gold), var(--color-gold-2));
+            color: #0b0b0b;
             padding: 12px 25px;
             border: none;
             border-radius: 25px;
@@ -307,19 +325,19 @@
 
         .btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
+            box-shadow: 0 5px 18px rgba(212,175,55,0.25);
         }
 
         .milestone-tracker {
-            background: #e8f4fd;
-            border-left: 4px solid #3498db;
+            background: #0f0f10;
+            border-left: 4px solid var(--color-gold);
             padding: 20px;
             margin: 20px 0;
             border-radius: 8px;
         }
 
         .milestone-tracker h4 {
-            color: #2c3e50;
+            color: #eaeaea;
             margin-bottom: 10px;
         }
 
@@ -330,175 +348,38 @@
 
         .checklist li {
             padding: 5px 0;
-            color: #555;
+            color: #ccc;
         }
 
         .checklist li:before {
-            content: "☐ ";
-            color: #3498db;
+            content: "\u2610 ";
+            color: var(--color-gold);
             font-weight: bold;
         }
 
-        /* === MODAL STYLES === */
-        .modal-overlay {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.7);
-            z-index: 1000;
-            overflow-y: auto;
-            padding: 20px;
-        }
-
-        .modal-overlay.active {
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-        }
-
-        .modal-content {
-            background: white;
-            border-radius: var(--border-radius);
-            max-width: 1000px;
-            width: 100%;
-            margin: 40px auto;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
-            animation: slideIn 0.3s ease-out;
-        }
-
-        @keyframes slideIn {
-            from {
-                opacity: 0;
-                transform: translateY(-50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .modal-header {
-            background: linear-gradient(135deg, #2c3e50, #3498db);
-            color: white;
-            padding: 20px 30px;
-            border-radius: var(--border-radius) var(--border-radius) 0 0;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .modal-header h3 {
-            margin: 0;
-            font-size: 1.5em;
-        }
-
-        .close-btn {
-            background: rgba(255,255,255,0.2);
-            border: none;
-            color: white;
-            font-size: 2em;
-            cursor: pointer;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.3s;
-        }
-
-        .close-btn:hover {
-            background: rgba(255,255,255,0.3);
-            transform: rotate(90deg);
-        }
-
-        .modal-body {
-            padding: 30px;
-            max-height: 60vh;
-            overflow-y: auto;
-            background: #f8f9fa;
-        }
-
-        .modal-body pre {
-            white-space: pre-wrap;
-            word-wrap: break-word;
-            font-family: 'Courier New', monospace;
-            font-size: 0.9em;
-            line-height: 1.6;
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            border: 1px solid #dee2e6;
-        }
-
-        .modal-footer {
-            padding: 20px 30px;
-            background: #f1f3f5;
-            border-radius: 0 0 var(--border-radius) var(--border-radius);
-            display: flex;
-            justify-content: flex-end;
-            gap: 10px;
-        }
-
-        .stats-badge {
-            display: inline-block;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            color: white;
-            padding: 5px 15px;
-            border-radius: 15px;
-            font-size: 0.8em;
-            margin-left: 10px;
-        }
-
-        .completion-bar {
-            background: #ecf0f1;
-            height: 8px;
-            border-radius: 10px;
-            overflow: hidden;
-            margin: 10px 0;
-        }
-
-        .completion-fill {
-            background: linear-gradient(90deg, #27ae60, #2ecc71);
-            height: 100%;
-            transition: width 0.5s ease;
-        }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <h1>🎯 Evidence-Based Management Dashboard</h1>
-            <p>Communication → Employee Engagement → Job Performance</p>
+            <h1>🎯 My Evidence-Based Management Dashboard</h1>
+            <p>MGT357 - Fall 2025 | Portfolio Project</p>
             
             <div class="student-info">
                 <div><strong>Student:</strong> Ethan Benson</div>
-                <div><strong>Problem Focus:</strong> Supervisor Communication Quality in Federal Government</div>
-                <div><strong>Dashboard:</strong> <a href="https://ebenson2384.github.io/EBM-DASHBOARD-BENSO2EG/" style="color: #74b9ff;">View Live Dashboard</a></div>
-                <div><strong>Last Updated:</strong> November 21, 2025</div>
-            </div>
-            
-            <div style="margin-top: 15px;">
-                <span class="stats-badge">📊 13 Files Complete</span>
-                <span class="stats-badge">📝 405,090 Characters</span>
-                <span class="stats-badge">✅ 100% Complete</span>
-            </div>
-            
-            <div class="completion-bar">
-                <div class="completion-fill" style="width: 100%;"></div>
+                <div><strong>Problem Focus:</strong> [How to improve communication in the work place]</div>
+                <div><strong>Repository:</strong> <a href="https://github.com/ethanbenson" target="_blank" rel="noopener" style="color: var(--color-gold);">https://github.com/ethanbenson</a></div>
+                <div><strong>Last Updated:</strong> <span id="last-updated">Loading</span></div>
             </div>
         </div>
 
         <!-- Persistent Progress Indicator -->
         <div class="progress-indicator">
-            <div class="progress-step completed" onclick="showTab(1)">🎯 Framework ✓</div>
-            <div class="progress-step completed" onclick="showTab(2)">🔍 Evidence ✓</div>
-            <div class="progress-step completed" onclick="showTab(3)">⚖️ Synthesis ✓</div>
-            <div class="progress-step completed" onclick="showTab(4)">🚀 Application ✓</div>
-            <div class="progress-step completed" onclick="showTab(5)">📊 Assessment ✓</div>
+            <div class="progress-step pending" onclick="showTab(1)">🎯 Framework</div>
+            <div class="progress-step pending" onclick="showTab(2)">🔍 Evidence</div>
+            <div class="progress-step pending" onclick="showTab(3)">⚖️ Synthesis</div>
+            <div class="progress-step pending" onclick="showTab(4)">🚀 Application</div>
+            <div class="progress-step pending" onclick="showTab(5)">📊 Assessment</div>
         </div>
 
         <div class="tab-container">
@@ -591,7 +472,7 @@ How will you know if your evidence-based solution worked?</pre>
                         </ul>
                     </div>
 
-                    <div style="background: #f8f9fa; padding: 20px; border-radius: 10px; margin: 20px 0;">
+                    <div style="background: rgba(212,175,55,0.06); padding: 20px; border-radius: 10px; margin: 20px 0;">
                         <h4>🎯 Evidence Collection Goals:</h4>
                         <ul>
                             <li><strong>For Step 2:</strong> What evidence supports our assumed problem?</li>
@@ -765,89 +646,43 @@ Weight the evidence and form recommendations.</pre>
     </div>
 
     <script>
-        // Content file loading functionality
+        // Set and update the Last Updated date daily (updates at midnight)
+        function formatDate(d) {
+            return d.toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' });
+        }
+
+        function setLastUpdatedToToday() {
+            const el = document.getElementById('last-updated');
+            if (!el) return;
+            const now = new Date();
+            el.textContent = formatDate(now);
+
+            // Calculate ms until next local midnight
+            const tomorrow = new Date(now);
+            tomorrow.setDate(now.getDate() + 1);
+            tomorrow.setHours(0,0,0,0);
+            const msUntilMidnight = tomorrow - now;
+
+            // Schedule the first update at midnight, then every 24h
+            setTimeout(function() {
+                setLastUpdatedToToday();
+                setInterval(setLastUpdatedToToday, 24 * 60 * 60 * 1000);
+            }, msUntilMidnight + 1000); // add 1s buffer
+        }
+
+    // Initialize content and last-updated
+    setLastUpdatedToToday();
+
+    // Content file loading functionality
         function loadContentFiles() {
-            // Load all content previews when dashboard loads
-            if (typeof getPreview !== 'undefined') {
-                // Update problem definition preview
-                const problemDef = document.getElementById('problem-definition-content');
-                if (problemDef) {
-                    problemDef.textContent = getPreview('ask-problem-definition.txt');
-                }
-                
-                // Update stakeholder analysis preview
-                const stakeholder = document.getElementById('stakeholder-analysis-content');
-                if (stakeholder) {
-                    stakeholder.textContent = getPreview('ask-stakeholder-analysis.txt');
-                }
-                
-                // Update success criteria preview
-                const success = document.getElementById('success-criteria-content');
-                if (success) {
-                    success.textContent = getPreview('ask-success-criteria.txt');
-                }
-                
-                console.log('✅ Content previews loaded from 405,090 characters of evidence');
-            }
+            // This function would load content from .txt files
+            // For now, it shows placeholder content
+            console.log('Content files would be loaded here');
         }
 
-        // Function to open content file in modal
+        // Function to simulate opening content files in VS Code
         function openContentFile(filename) {
-            if (typeof getContent === 'undefined') {
-                alert(`Content system not loaded. Please ensure dashboard_content.js is loaded.`);
-                return;
-            }
-            
-            const content = getContent(filename);
-            
-            // Create or get modal
-            let modal = document.getElementById('content-modal');
-            if (!modal) {
-                modal = document.createElement('div');
-                modal.id = 'content-modal';
-                modal.className = 'modal-overlay';
-                modal.innerHTML = `
-                    <div class="modal-content" onclick="event.stopPropagation()">
-                        <div class="modal-header">
-                            <h3 id="modal-title"></h3>
-                            <button onclick="closeModal()" class="close-btn">×</button>
-                        </div>
-                        <div class="modal-body">
-                            <pre id="modal-text"></pre>
-                        </div>
-                        <div class="modal-footer">
-                            <button class="btn" onclick="copyToClipboard()">📋 Copy</button>
-                            <button class="btn" onclick="closeModal()">Close</button>
-                        </div>
-                    </div>
-                `;
-                document.body.appendChild(modal);
-                modal.addEventListener('click', closeModal);
-            }
-            
-            // Update modal content
-            document.getElementById('modal-title').textContent = filename;
-            document.getElementById('modal-text').textContent = content;
-            modal.classList.add('active');
-            
-            // Store current filename for copy function
-            window.currentFilename = filename;
-        }
-
-        function closeModal() {
-            const modal = document.getElementById('content-modal');
-            if (modal) {
-                modal.classList.remove('active');
-            }
-        }
-
-        function copyToClipboard() {
-            const content = getContent(window.currentFilename);
-            navigator.clipboard.writeText(content).then(() => {
-                alert('✅ Content copied to clipboard!');
-            }).catch(err => {
-                alert('❌ Could not copy: ' + err);
-            });
+            alert(`In VS Code, you would open: content/${filename}\n\nThis is where you'll edit your content. Use GitHub Copilot to help with writing and organization!`);
         }
 
         // Tab Navigation Functionality
@@ -868,9 +703,6 @@ Weight the evidence and form recommendations.</pre>
             
             // Update progress indicator
             updateProgressIndicator(tabNumber);
-            
-            // Scroll to top
-            window.scrollTo({ top: 0, behavior: 'smooth' });
         }
         
         // Update Progress Indicator based on current tab
@@ -880,45 +712,24 @@ Weight the evidence and form recommendations.</pre>
             progressSteps.forEach((step, index) => {
                 step.classList.remove('completed', 'active', 'pending');
                 
-                // All steps are completed for this fully filled dashboard
-                step.classList.add('completed');
-                
-                // Highlight current
-                if (index + 1 === currentTab) {
+                if (index + 1 < currentTab) {
+                    step.classList.add('completed');
+                } else if (index + 1 === currentTab) {
                     step.classList.add('active');
+                } else {
+                    step.classList.add('pending');
                 }
             });
         }
 
         // Initialize dashboard
         document.addEventListener('DOMContentLoaded', function() {
-            console.log('🚀 EBM Dashboard initializing...');
-            
-            // Wait for dashboard_content.js to load
-            if (typeof DASHBOARD_CONTENT !== 'undefined') {
-                loadContentFiles();
-                console.log(`📊 Loaded ${Object.keys(DASHBOARD_CONTENT).length} evidence files`);
-            } else {
-                console.warn('⚠️  dashboard_content.js not loaded yet, retrying...');
-                setTimeout(loadContentFiles, 500);
-            }
-            
+            loadContentFiles();
             updateProgressIndicator(1);
-            console.log('✅ Dashboard ready!');
-        });
-
-        // Keyboard shortcuts
-        document.addEventListener('keydown', function(e) {
-            // ESC to close modal
-            if (e.key === 'Escape') {
-                closeModal();
-            }
-            
-            // Number keys 1-5 to switch tabs
-            if (e.key >= '1' && e.key <= '5') {
-                showTab(parseInt(e.key));
-            }
+            // Ensure last-updated runs when page is ready
+            setLastUpdatedToToday();
         });
     </script>
+    <script src="content-loader.js"></script> 
 </body>
 </html>
