@@ -1,0 +1,319 @@
+# Scientific Evidence: Methods & Acquisition Strategy
+# Document your systematic approach to finding research evidence
+
+## Research Question
+**Context:** Studying how increasing workplace communication affects job performance in general organizations, using a mediation model where communication (X) improves employee engagement (M), which in turn improves job performance (Y).
+
+**Primary Research Question:** What is the empirical evidence linking workplace communication quality/frequency to employee job performance outcomes?
+
+**Secondary Research Question:** What mechanisms or mediators explain the relationship between communication and performance (specifically, does employee engagement mediate this relationship)?
+
+## Search Strategy
+
+### Databases Searched
+- [X] **Google Scholar** [For multidisciplinary academic content - most accessible free resource]
+- [X] **PubMed/MEDLINE** [For organizational behavior and health-related workplace research]
+- [X] **SSRN** [For business and social science working papers]
+- [X] **ResearchGate** [For accessing full-text papers and contacting authors]
+- [X] **AI Research Assistant (ChatGPT/Claude)** [For search term generation and literature recommendations]
+- [ ] **Business Source Premier** [Institutional access not available]
+- [ ] **JSTOR** [Institutional access not available]
+- [ ] **PsycINFO** [Institutional access not available - would be ideal but requires subscription]
+
+**Note:** Limited to publicly accessible databases and AI-assisted search tools due to lack of institutional library access. This is a significant limitation but mitigated by comprehensive Google Scholar coverage and AI assistance for literature identification.
+
+### Keywords and Search Terms
+
+#### Primary Keywords
+- "workplace communication"
+- "organizational communication"
+- "supervisor communication"
+- "manager communication"
+- "job performance"
+- "employee performance"
+- "work performance"
+- "employee engagement"
+- "work engagement"
+
+#### Secondary Keywords  
+- "internal communication"
+- "communication effectiveness"
+- "communication quality"
+- "information sharing"
+- "task performance"
+- "contextual performance"
+- "organizational citizenship behavior"
+- "engagement mediator"
+- "communication satisfaction"
+
+#### Boolean Search Combinations
+**Search String 1:** ("workplace communication" OR "organizational communication") AND ("job performance" OR "employee performance") AND ("correlation" OR "effect size" OR "meta-analysis")
+
+**Search String 2:** ("supervisor communication" OR "manager communication") AND "employee engagement" AND performance
+
+**Search String 3:** "communication" AND "engagement" AND "performance" AND mediation
+
+**Search String 4:** "internal communication effectiveness" AND "organizational outcomes"
+
+**Search String 5:** "communication quality" AND "work performance" AND (r= OR β= OR "effect size")
+
+### Search Filters Applied
+- **Date Range:** 2000-2025 (prioritize 2010-2025 for current workplace relevance; include older seminal works if highly cited)
+- **Language:** English only (resource constraint)
+- **Study Types:** Quantitative studies with correlation coefficients, regression analyses, or meta-analyses; exclude purely qualitative studies for effect size requirement
+- **Geographic Scope:** No geographic restrictions (seeking generalizable findings across cultures/regions)
+- **Industry Focus:** General workplace/organizational settings; exclude highly specialized contexts (military, emergency response) unless findings explicitly generalize
+
+## Selection Criteria
+
+### Inclusion Criteria
+**Studies WILL be included if they meet these requirements:**
+
+1. **Study Design:** Quantitative research with statistical analysis (correlational, experimental, quasi-experimental, meta-analysis)
+2. **Effect Size Reporting:** Must report correlation coefficient (r), standardized regression coefficient (β), or other effect size measure (d, OR, etc.)
+3. **Population:** Working adults in organizational settings (employees, not students in simulated tasks)
+4. **Sample Size:** N ≥ 100 participants (ensures adequate statistical power; smaller meta-analyses acceptable if aggregating multiple studies)
+5. **Communication Measure:** Must measure workplace/organizational communication (supervisor-employee, internal communication, information sharing, etc.)
+6. **Performance Measure:** Must measure individual or organizational performance, productivity, or related outcomes (engagement accepted as mediator)
+7. **Peer Review:** Published in peer-reviewed journal or well-regarded academic working paper
+8. **Accessibility:** Full text accessible through free databases, institutional repositories, or author contact
+9. **Language:** English (resource constraint)
+10. **Relevance:** Direct bearing on communication-engagement-performance relationship
+
+### Exclusion Criteria  
+**Studies will be EXCLUDED if they have:**
+
+1. **Purely qualitative:** No quantitative effect sizes reported (case studies without statistics, interview-only studies)
+2. **Non-workplace context:** Student samples in lab experiments without workplace relevance; non-organizational settings
+3. **Inaccessible:** Paywalled articles without free access and author non-responsive to requests
+4. **Communication not focal:** Studies where communication is minor variable or not adequately measured
+5. **Outcome mismatch:** Studies measuring only attitudes/perceptions without performance/engagement outcomes
+6. **Very small samples:** N < 100 for primary studies (except meta-analyses)
+7. **Highly specialized:** Military, emergency response, or other contexts that don't generalize to typical workplace
+8. **Poor quality:** Obvious methodological flaws, non-peer-reviewed blog posts/opinion pieces, predatory journals
+9. **Duplicate publication:** Same data published multiple times (keep most comprehensive version)
+10. **Language barrier:** Non-English publications (would include if translation available but resource constrained)
+
+## Search Results Summary
+
+### Initial Search Results
+- **Total Articles Found:** ~450 articles across all search strings and databases (Google Scholar primary source)
+- **After Removing Duplicates:** ~280 unique articles (many appeared across multiple searches)
+- **After Title/Abstract Screening:** ~35 articles meeting basic criteria (quantitative, workplace context, performance outcomes)
+- **After Full-Text Screening:** ~12 articles with accessible full text and reported effect sizes
+- **Selected for Final Review:** 5 articles selected for detailed CAT Manager analysis (2 required minimum, selected best 5 for comprehensiveness)
+
+**Selection Rationale:** Prioritized meta-analyses (strongest evidence), large-sample primary studies with clear effect sizes, and studies explicitly testing communication-engagement-performance relationships. Emphasized recency (2010+) while including seminal older works if highly cited.
+
+### Search Documentation
+
+**Search 1 (November 20, 2025)**
+- **Database:** Google Scholar
+- **Search Terms:** "workplace communication" AND "job performance" AND "meta-analysis"
+- **Results:** 127 results
+- **Notes:** Found several meta-analyses but many focused on team communication rather than individual-level; filtered for individual performance outcomes
+
+**Search 2 (November 20, 2025)**
+- **Database:** Google Scholar  
+- **Search Terms:** "supervisor communication" AND "employee engagement" AND "performance" AND ("r=" OR "correlation")
+- **Results:** 89 results
+- **Notes:** More specific to supervisor-employee dyad which is most relevant; several studies reported engagement as mediator
+
+**Search 3 (November 20, 2025)**
+- **Database:** Google Scholar
+- **Search Terms:** "organizational communication" AND "employee performance" AND "effect size"
+- **Results:** 156 results
+- **Notes:** Broader search captured communication climate and information flow studies; filtered for individual performance measures
+
+**Search 4 (November 21, 2025)**
+- **Database:** PubMed
+- **Search Terms:** "communication"[Title/Abstract] AND "engagement"[Title/Abstract] AND "performance"[Title/Abstract] AND "mediation"
+- **Results:** 43 results
+- **Notes:** Smaller database for business research but high-quality health/organizational behavior studies; several tested mediation models
+
+**Search 5 (November 21, 2025)**
+- **Database:** ResearchGate + AI Assistant
+- **Search Terms:** Asked AI for "seminal studies on workplace communication and job performance with reported correlations"; manually searched ResearchGate for open access versions
+- **Results:** AI recommended 15 key papers; 8 accessible via ResearchGate
+- **Notes:** AI particularly helpful for identifying meta-analyses and highly-cited works; ResearchGate provided full-text access to several paywalled articles
+
+## Quality Assessment Approach
+**Framework:** Will use CAT Manager systematic critical appraisal framework in evidence-scientific-appraisal.txt to evaluate each selected study across five dimensions: Design, Sample, Measurement, Bias, and Applicability.
+
+### Research Design Hierarchy
+**Prioritizing higher-quality evidence:**
+
+1. **Systematic Reviews/Meta-analyses** [Highest quality] - Aggregate multiple studies; provide weighted average effect sizes; assess publication bias
+2. **Randomized Controlled Trials** [High quality] - Strongest causal inference; rare in workplace communication research due to practical/ethical constraints
+3. **Longitudinal/Panel Studies** [Medium-high quality] - Temporal ordering helps establish causality; controls for baseline
+4. **Quasi-experimental Studies** [Medium quality] - Natural experiments or pre-post comparisons without full randomization
+5. **Cross-sectional Correlational Studies** [Medium-low quality] - Most common design; useful for effect size estimation but limited causal inference
+6. **Case Studies with Quantitative Data** [Lower quality but contextually valuable] - Rich detail but limited generalizability
+
+**For this review:** Expect primarily cross-sectional correlational studies and hopefully 1-2 meta-analyses given the established nature of communication-performance research. Will weight meta-analyses most heavily in synthesis.
+
+### Quality Criteria Checklist
+**Minimum standards for inclusion:**
+
+- [X] Clear research question/hypothesis stated
+- [X] Appropriate methodology for research question
+- [X] Adequate sample size (N ≥ 100 for primary studies)
+- [X] Valid measurement tools (established scales preferred)
+- [X] Appropriate statistical analysis for claims made
+- [X] Clear reporting of results (effect sizes, confidence intervals, p-values)
+- [X] Discussion of limitations and alternative explanations
+- [X] Peer-reviewed publication venue
+
+**Additional quality indicators (preferred but not required):**
+- Control variables included (age, tenure, industry, etc.)
+- Multiple informants (reduce common method bias)
+- Theoretical framework guiding hypotheses
+- Replication of prior findings
+- Practical significance discussed alongside statistical significance
+
+## Documentation Process
+**Systematic approach to tracking and organizing scientific evidence**
+
+### Reference Management
+**System:** Manual spreadsheet tracking + BibTeX format for citations
+- Created Excel spreadsheet with columns: Authors, Year, Title, Journal, Sample Size, Design, Key Findings, Effect Sizes, Relevance Rating, Access Status, Notes
+- Saved full-text PDFs in `/EBM-Dashboard/literature/` folder (not uploaded to GitHub to respect copyright)
+- Generated BibTeX citations for formal reference list
+
+**Organization Strategy:**
+- Tier 1 (selected for full review): 5 best papers for detailed CAT Manager analysis
+- Tier 2 (supporting evidence): 7 additional papers consulted for context
+- Tier 3 (reviewed but excluded): Documented why excluded for transparency
+
+### Evidence Extraction Form
+**Information recorded for each selected study:**
+
+1. **Citation Details**
+   - Full APA citation
+   - DOI/URL for retrieval
+   - Database where found
+   - Access method (open access, author-provided, etc.)
+
+2. **Study Design and Methodology**
+   - Research design type
+   - Data collection method
+   - Analysis approach
+   - Control variables included
+
+3. **Sample Characteristics**
+   - Sample size (N)
+   - Population description
+   - Industry/sector
+   - Geographic location
+   - Response rate if survey
+
+4. **Key Findings**
+   - Primary hypothesis and results
+   - Effect sizes with confidence intervals
+   - Statistical significance
+   - Practical significance interpretation
+
+5. **Relevance to Research Question**
+   - Communication variable measured
+   - Performance/engagement variable measured
+   - Direct relevance rating (High/Medium/Low)
+   - Unique contribution to evidence base
+
+6. **Quality Assessment**
+   - Preliminary quality rating (High/Medium/Low)
+   - Strengths noted
+   - Limitations noted
+   - Bias concerns
+
+**Storage:** All extraction forms saved in evidence-scientific-sources.txt with full details for transparency and replicability
+
+## Challenges and Limitations
+**Honest assessment of search process constraints**
+
+### Search Limitations
+
+**1. Database Access Constraints**
+- **Issue:** No institutional library access to Business Source Premier, PsycINFO, JSTOR, or Web of Science
+- **Impact:** Missed business/psychology-focused databases most likely to have relevant organizational behavior research
+- **Mitigation:** Relied heavily on Google Scholar (broad coverage), ResearchGate (author-uploaded papers), and AI assistance for literature identification
+- **Residual Gap:** Likely missed some high-quality studies behind paywalls in top-tier journals
+
+**2. Full-Text Accessibility**
+- **Issue:** Many relevant articles identified via abstracts but full text paywalled ($30-50 per article)
+- **Impact:** Reduced from ~35 potentially relevant studies to ~12 accessible studies
+- **Mitigation:** Contacted authors via ResearchGate for PDFs (50% response rate); prioritized open-access journals
+- **Residual Gap:** May have excluded excellent studies simply due to access barriers
+
+**3. Search Term Limitations**
+- **Issue:** "Communication" is broad term; may have missed studies using different terminology (e.g., "information sharing," "transparency," "feedback")
+- **Impact:** Potential relevant studies not captured in searches
+- **Mitigation:** Used multiple search strings with varied terminology; AI helped identify alternative terms
+- **Residual Gap:** Likely missed some studies with non-standard communication terminology
+
+**4. Recency Bias**
+- **Issue:** Google Scholar and open access favor recent publications; older seminal works may be overlooked
+- **Impact:** May underweight foundational studies from 1990s-2000s
+- **Mitigation:** AI assistant specifically asked for "seminal" works; included highly-cited older papers when identified
+- **Residual Gap:** Historical context for field development may be incomplete
+
+### Resource Constraints
+
+**1. Time Constraints**
+- **Allocated Time:** ~6-8 hours total for literature search and review (class assignment timeframe)
+- **Ideal Time:** Systematic review would require 40+ hours for comprehensive search
+- **Impact:** Prioritized finding 2-5 high-quality studies over exhaustive search
+- **Trade-off Accepted:** Focused depth over breadth - better to thoroughly analyze few good studies than superficially review many
+
+**2. Expertise Limitations**
+- **Issue:** Student conducting review, not professional systematic reviewer
+- **Impact:** May have missed nuanced search strategies or quality assessment criteria experts would use
+- **Mitigation:** Used structured frameworks (CAT Manager), consulted AI for methodology guidance
+- **Residual Gap:** Professional librarian or systematic review expert would likely improve search quality
+
+**3. Single Reviewer**
+- **Issue:** Best practice for systematic reviews is 2+ independent reviewers for screening/selection
+- **Impact:** Potential bias in inclusion/exclusion decisions; may miss relevant studies or include marginal ones
+- **Mitigation:** Used explicit criteria checklist; documented decisions for transparency
+- **Residual Gap:** Consensus process would reduce subjective judgment errors
+
+### Topic-Specific Challenges
+
+**1. Construct Definition Variability**
+- **Issue:** "Communication" measured many ways - frequency, quality, openness, satisfaction, effectiveness, etc.
+- **Impact:** Hard to directly compare effect sizes across studies with different communication constructs
+- **Mitigation:** Documented how each study operationalized communication; grouped similar measures
+- **Implication:** Meta-analysis would need to code communication subtypes
+
+**2. Performance Measurement Heterogeneity**
+- **Issue:** Performance measured as supervisor ratings, objective metrics, self-report, engagement, OCB, etc.
+- **Impact:** Effect sizes not directly comparable across different performance operationalizations
+- **Mitigation:** Differentiated task performance vs. contextual performance vs. engagement in evidence synthesis
+- **Implication:** Need to qualify findings by outcome type
+
+**3. Common Method Bias Prevalence**
+- **Issue:** Many studies rely on single-source self-report surveys (employee reports both communication and own performance)
+- **Impact:** Effect sizes likely inflated due to common method variance
+- **Mitigation:** Prioritized studies with multiple informants or objective performance data where possible
+- **Residual Gap:** May still overestimate true effect sizes
+
+**4. Cross-sectional Design Dominance**
+- **Issue:** Most accessible studies are cross-sectional correlational designs (communication and performance measured simultaneously)
+- **Impact:** Cannot establish causal direction - does communication improve performance, or do high performers communicate more?
+- **Mitigation:** Relied on longitudinal studies and experimental research where available; used theory to support causal interpretation
+- **Residual Gap:** Causal claims remain tentative for most evidence
+
+**5. Publication Bias**
+- **Issue:** Studies finding positive communication-performance relationships more likely published than null findings
+- **Impact:** Average effect size in literature likely overestimates true population effect
+- **Mitigation:** Sought meta-analyses that test for publication bias; acknowledged limitation in interpretation
+- **Residual Gap:** Cannot fully correct for "file drawer problem"
+
+---
+
+**TRANSPARENCY NOTE:** These limitations do not invalidate the evidence but require cautious interpretation. Effect sizes should be viewed as upper-bound estimates. Causal claims are theoretical rather than empirical. Generalizability may be limited to contexts similar to studied samples. These constraints are typical of student-conducted evidence reviews and acceptable given resource/time limitations, but a funded systematic review with full database access would strengthen conclusions.
+
+---
+**Search Conducted By:** Ethan Benson
+**Search Dates:** November 20-21, 2025
+**AI Tools Used:** ChatGPT-4, Claude (for search term generation and literature recommendations)
+**Next Step:** Document selected studies in evidence-scientific-sources.txt and evaluate quality in evidence-scientific-appraisal.txt

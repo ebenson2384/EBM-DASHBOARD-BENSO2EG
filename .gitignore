@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+
+# Data files
+*.zip
+*.xlsx
+data/FEVS_2024_data.zip
+data/FEVS_2024.zip
+data/FEVS_2024_Governmentwide_Data.xlsx
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# VS Code
+.vscode/
+
+# Temporary files
+*.log
+*.tmp
+.cache/

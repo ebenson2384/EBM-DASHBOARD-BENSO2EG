@@ -1,0 +1,177 @@
+# Practitioner Evidence: Methods & Acquisition Strategy
+# Document your approach to gathering expert insights and professional experience
+
+## Practitioner Evidence Goals
+**Primary Goal:** Understand how workplace communication practices actually affect employee performance in real organizational settings from experienced HR professionals, managers, and organizational development consultants.
+**Secondary Goal:** Identify practical implementation strategies and common pitfalls when improving workplace communication systems to enhance job performance.
+
+## Target Practitioners
+
+### Industry Experts
+**Target Profile:** HR professionals, organizational development specialists, and managers with direct experience implementing communication improvement initiatives
+- Years of experience desired: 10+ years in organizational management or HR
+- Industry/sector focus: General business organizations (private sector, government, non-profit)
+- Role/position types: HR Directors, Chief People Officers, Organizational Development Consultants, Senior Managers
+- Company size experience: Mid-size to large organizations (100+ employees) where communication systems are formalized
+- Geographic location: United States (to align with FEVS dataset context)
+
+### Specific Practitioners Identified
+1. **Name/Title/Organization:** Society for Human Resource Management (SHRM) - Research Publications & Practitioner Reports
+   - **Relevance:** SHRM publishes extensive practitioner research on workplace communication effectiveness, employee engagement, and performance management based on surveys of 300,000+ HR professionals
+   - **Contact Method:** Public reports and research publications available at shrm.org/research
+
+2. **Name/Title/Organization:** Harvard Business Review - Practitioner Case Studies on Communication & Performance
+   - **Relevance:** HBR publishes case studies from executives and consultants implementing communication improvement initiatives in real organizations
+   - **Contact Method:** HBR.org case study database and practitioner articles
+
+3. **Name/Title/Organization:** LinkedIn Workplace Learning Reports & Practitioner Insights
+   - **Relevance:** Annual reports from workplace learning professionals on communication skills, employee development, and performance outcomes
+   - **Contact Method:** LinkedIn Learning research reports and industry practitioner surveys
+
+## Acquisition Methods
+
+### Expert Interviews
+#### Interview Planning
+- **Target Number:** 3-5 published practitioner case studies and expert articles (secondary sources due to time constraints)
+- **Interview Length:** N/A - Using published practitioner insights rather than direct interviews
+- **Interview Method:** Document analysis of published practitioner reports, case studies, and expert articles
+- **Recording Plan:** Systematic documentation of practitioner insights using evidence template
+
+#### Interview Protocol
+**Note:** Adapting interview questions to guide analysis of published practitioner sources
+
+**Opening Questions (adapted for document analysis):**
+- What is the practitioner's background and experience with workplace communication?
+- How long have they been working in organizational development/HR/management?
+
+**Problem-Focused Questions:**
+- Have they encountered communication-performance gaps in organizations?
+- What causes communication breakdowns that affect employee performance?
+- How common is poor workplace communication in their experience?
+
+**Solution-Focused Questions:**
+- What communication improvement approaches have they implemented or observed?
+- What solutions have they seen work effectively?
+- What would they recommend based on their experience?
+
+**Implementation Questions:**
+- What challenges arise when implementing communication improvements?
+- What would they do differently based on lessons learned?
+- What resources or support are critical for success?
+
+**Closing Questions:**
+- What are the key takeaways from their experience?
+- What evidence do they provide for their recommendations?
+
+### Professional Networks
+
+#### LinkedIn Outreach
+- **Target Search Terms:** "workplace communication", "employee performance", "internal communication strategy", "employee engagement", "performance management"
+- **Connection Strategy:** Reviewing LinkedIn Workplace Learning Reports and Talent Trends reports published by industry practitioners
+- **Message Template:** N/A - using publicly available practitioner research reports
+
+#### Industry Associations
+- **Relevant Associations:** 
+  * Society for Human Resource Management (SHRM)
+  * Association for Talent Development (ATD)
+  * International Association of Business Communicators (IABC)
+  * Project Management Institute (PMI)
+- **Contact Strategy:** Accessing published research reports and practitioner surveys
+- **Events/Forums:** Review conference proceedings and published practitioner presentations
+
+### Case Study Research
+
+#### Published Case Studies
+- **Target Sources:** 
+  * Harvard Business Review case studies
+  * SHRM case study library
+  * McKinsey Quarterly practitioner articles
+  * Gallup Workplace reports
+  * Deloitte Human Capital Trends
+- **Search Strategy:** 
+  * Keywords: "workplace communication improvement", "employee engagement programs", "performance management", "internal communication strategy"
+  * Filter for: practitioner-authored articles, case studies with measurable outcomes, recent publications (2020-2025)
+- **Documentation Plan:** Extract key insights using standardized evidence template focusing on problem definition, solution approach, implementation process, and results
+
+#### Company Examples
+- **Target Companies:** Fortune 500 companies and government agencies known for communication excellence (e.g., Google, Microsoft, federal agencies with high FEVS scores)
+- **Information Sources:** Annual reports, HR conference presentations, published case studies, news articles on workplace initiatives
+- **Contact Strategy:** Using secondary sources - no direct contact needed
+
+## Documentation Strategy
+
+### Interview Documentation
+- **Recording:** Systematic extraction of key quotes and insights from published sources
+- **Note-taking:** Structured notes using evidence template for each practitioner source
+- **Transcription:** Direct quotes from published articles and reports
+- **Analysis:** Thematic analysis identifying patterns across multiple practitioner sources - looking for consensus on communication-performance link and implementation best practices
+
+### Case Study Documentation
+- **Template:** Standardized case study summary including: organization profile, problem description, solution approach, implementation process, measurable outcomes, lessons learned
+- **Key Elements:** Problem context, communication intervention details, performance metrics, success factors, challenges faced
+- **Source Tracking:** Full citations for all practitioner sources with URLs and access dates
+
+## Outreach Strategy
+
+### Contact Approach
+**Initial Contact Message Template:**
+N/A - Using publicly available practitioner research and published case studies. No direct outreach required.
+
+**Follow-up Strategy:**
+If additional practitioner perspectives needed, will expand search to additional professional association reports and consulting firm publications.
+
+**Incentives:**
+N/A - using publicly available sources
+
+### Timing Plan
+- **Outreach Start Date:** November 20, 2025 (today)
+- **Interview Window:** November 20-22, 2025 (document review and analysis)
+- **Follow-up Period:** November 23-25, 2025 (if additional sources needed)
+
+## Ethical Considerations
+
+### Informed Consent
+- **Purpose Explanation:** Using publicly available practitioner research - no informed consent required
+- **Use of Information:** Properly citing all practitioner sources
+- **Anonymity/Attribution:** Full attribution to published sources
+- **Approval Process:** N/A - using published materials
+
+### Professional Courtesy
+- **Time Respect:** N/A for secondary sources
+- **Preparation:** Thorough review of source materials before extraction
+- **Follow-through:** Proper citation and acknowledgment of practitioner contributions
+
+## Expected Challenges
+
+### Access Challenges
+Some practitioner reports may be behind paywalls (e.g., HBR articles). Will prioritize publicly accessible sources and use university library access when needed.
+
+### Response Rate Concerns
+N/A - using published sources eliminates this challenge
+
+### Quality Concerns
+Must carefully evaluate practitioner source credibility - some may be marketing materials rather than genuine evidence. Will focus on established professional associations and peer-reviewed practitioner journals.
+
+### Time Constraints
+Limited time to review extensive practitioner literature. Will focus on highest-quality sources from established professional organizations.
+
+## Backup Plans
+
+### Alternative Sources
+If primary sources insufficient:
+- Deloitte Human Capital Trends reports
+- PwC Workforce Analytics publications  
+- MIT Sloan Management Review practitioner articles
+- Forbes/Inc. Magazine workplace communication features
+
+### Modified Approaches
+If case studies limited, will supplement with practitioner survey data from professional associations
+
+### Minimum Viable Evidence
+Minimum: 3 credible practitioner sources (combination of case studies and expert reports) demonstrating real-world communication-performance relationships
+
+---
+COMPLETED: November 20, 2025
+METHOD: Secondary analysis of published practitioner research
+SOURCES: Professional association reports, case studies, expert articles
+FOCUS: Workplace communication → employee performance relationship

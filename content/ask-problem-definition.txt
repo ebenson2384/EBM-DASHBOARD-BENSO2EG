@@ -1,0 +1,64 @@
+# Problem Definition Framework
+# Use this template to clearly define your management problem
+
+## X → Y Framework
+### Current State (X - What's happening now that's problematic?)
+[Describe the current situation that needs to be changed]
+
+### Desired State (Y - What outcome do we want to achieve?)
+[Describe the ideal situation you want to reach]
+
+## PICOC Framework
+### Population (P - Who is affected by this problem?)
+[Identify the specific group(s) experiencing the problem]
+
+The new group of interns in the office is experiencing the problem. The upper management is affected by the problem.
+
+### Intervention (I - What solution/action are we considering?)
+[Describe the potential intervention or solution approach]
+
+Group meetings to discuss the importance of effective communication and how to implement what they learned.
+
+### Comparison (C - What alternatives exist?)
+[List alternative approaches or the "do nothing" option]
+
+You could not do anything. Fire interns that are holding the group back. Have one on one talks with each intern to figure out how they could communicate more effectively.
+
+### Outcomes (O - What will success look like?)
+[Define specific, measurable outcomes]
+
+
+
+### Context (C - Where/when does this apply?)
+[Specify the organizational, geographic, or temporal context]
+
+## Clear Problem Statement
+[Write a concise, specific statement of the management problem you're addressing]
+
+## Why This Problem Matters
+### Impact on Organization
+[Explain the consequences if this problem isn't addressed]
+
+### Stakeholder Impact
+[Describe how different groups are affected]
+
+### Strategic Alignment
+[Connect to organizational goals and priorities]
+
+## Evidence Questions to Explore
+### For the Problem (Step 2)
+- What evidence shows this problem exists?
+- How widespread is this problem?
+- What are the root causes?
+
+### For the Solution (Step 4)
+- What evidence supports our preferred solution?
+- Has this solution worked in similar contexts?
+- What are the potential risks and benefits?
+
+---
+INSTRUCTIONS: 
+1. Replace all bracketed placeholders with your specific content
+2. Use GitHub Copilot to help with writing and organization
+3. Reference Module 2 content for framework guidance
+4. Save frequently and commit to GitHub
