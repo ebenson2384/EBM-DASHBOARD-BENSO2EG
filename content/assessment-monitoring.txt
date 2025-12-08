@@ -1,309 +1,279 @@
-# Assessment: Monitoring & Evaluation Plan
-# Systematic approach to measuring implementation success and organizational impact
+# Assessment & Monitoring Plan
+# How we will measure success and adapt over time
 
-## Evaluation Framework Overview
+## Logic Model: Theory of Change
 
-### Evaluation Questions
-**Primary Evaluation Question:** [Main question about whether your solution worked]
+Our evidence-based intervention follows this causal pathway:
 
-**Secondary Evaluation Questions:**
-1. [Second most important question about effectiveness]
-2. [Third most important question about implementation process]
-3. [Fourth question about stakeholder satisfaction]
-4. [Fifth question about unintended consequences]
+### X → M → Y Framework
 
-### Evaluation Approach
-**Evaluation Type:** [Formative (during implementation) and/or Summative (after completion)]
-**Evaluation Design:** [Before-and-after comparison, with-and-without comparison, case study, etc.]
-**Mixed Methods Approach:** [How you'll combine quantitative and qualitative data]
+**X (Intervention Components):**
+- Communication Foundations Workshop (4-hour onboarding training)
+- Weekly "Sync & Clarify" Check-ins (15-min structured touchpoints)
+- Communication Resource Hub (self-service knowledge base)
+
+**M (Mediating Mechanisms - How it works):**
+1. **Knowledge & Skills**: Interns learn effective communication frameworks (5W1H, norms, channels)
+2. **Reinforcement Loops**: Weekly check-ins prevent skill decay and catch issues early
+3. **Psychological Safety**: Explicit permission to ask questions reduces fear barriers
+4. **Accessibility**: Resource hub enables self-service, reducing bottlenecks and wait times
+
+**Y (Expected Outcomes):**
+- **Primary**: 30-40% reduction in communication-related incidents (from 8.2/month to 5-6/month)
+- **Secondary**: Manager time savings (from 6 hrs/week to 3 hrs/week on clarifications)
+- **Tertiary**: Improved intern confidence in communication (from 42% to 80% "confident asking questions")
+
+### Causal Logic
+- **IF** interns gain communication skills and norms (M1) + receive ongoing reinforcement (M2) + feel safe asking questions (M3) + have easy access to resources (M4)
+- **THEN** they will ask better questions, use appropriate channels, and resolve issues faster
+- **RESULTING IN** fewer miscommunications, less manager time spent on clarifications, and better project outcomes
+
+---
+
+## Evaluation Design: Interrupted Time Series with Comparison
+
+### Why This Design?
+Based on our evidence synthesis:
+- **Scientific evidence** shows interrupted time series is more rigorous than simple before/after (controls for trends)
+- **Organizational constraints** prevent randomized controlled trial (can't ethically withhold training from some interns)
+- **Practitioner best practice** recommends multiple measurement points to detect decay effects
+
+### Design Structure
+
+**Timeline:**
+```
+Baseline Period (3 months): Oct-Dec 2025
+  ↓
+Intervention Launch: January 2026
+  ↓
+Post-Intervention Monitoring: Jan-Jun 2026 (monthly measurements)
+```
+
+**Treatment Group**: Current and future intern cohorts (n=12-16 per cohort)
+
+**Comparison Group (optional enhancement)**: Historical data from previous 12 months (Oct 2024-Sep 2025) to establish secular trends
+
+### Data Collection Points
+- **Baseline**: 3 monthly measurements (Oct, Nov, Dec 2025)
+- **Post-Intervention**: Monthly measurements for 6 months (Jan-Jun 2026)
+- **Follow-up**: Quarterly measurements in Year 2 to assess sustainability
+
+### What We're Measuring
+See KPI section below for specific metrics.
+
+---
 
 ## Key Performance Indicators (KPIs)
 
-### Outcome KPIs (What Changed)
-
-#### Primary Outcome KPI
-**KPI:** [Most important measure of whether your solution worked]
-- **Current Baseline:** [Where you're starting from]
-- **Target:** [What you want to achieve]
-- **Timeline:** [When you expect to see this change]
-- **Data Source:** [Where this data comes from]
-- **Collection Method:** [How you'll gather this data]
-- **Measurement Frequency:** [How often you'll measure this]
-
-#### Secondary Outcome KPIs
-**KPI 1:** [Second most important outcome measure]
-- **Current Baseline:** [Starting point]
-- **Target:** [Goal]
-- **Timeline:** [Expected timeframe]
-- **Data Source & Method:** [How you'll measure]
-
-**KPI 2:** [Third most important outcome measure]
-[Follow same structure]
-
-**KPI 3:** [Fourth most important outcome measure]
-[Follow same structure]
-
-### Process KPIs (How Implementation Went)
-
-#### Implementation Quality KPIs
-**KPI:** [Measure of how well you implemented the solution]
-- **Target:** [What good implementation looks like]
-- **Data Source:** [Where this data comes from]
-- **Collection Method:** [How you'll track this]
-- **Measurement Frequency:** [How often you'll measure]
-
-**KPI:** [Second measure of implementation quality]
-[Follow same structure]
-
-#### Stakeholder Engagement KPIs
-**KPI:** [Measure of stakeholder participation/satisfaction]
-- **Target:** [What good stakeholder engagement looks like]
-- **Data Source:** [Where this data comes from]
-- **Collection Method:** [How you'll track this]
-
-#### Resource Utilization KPIs
-**KPI:** [Measure of whether you used resources efficiently]
-- **Target:** [What efficient resource use looks like]
-- **Data Source:** [Where this data comes from]
-- **Collection Method:** [How you'll track this]
-
-### Impact KPIs (Broader Organizational Effects)
-
-#### Organizational Performance KPIs
-**KPI:** [Measure of broader organizational improvement]
-- **Current Baseline:** [Starting point]
-- **Target:** [Expected improvement]
-- **Timeline:** [When you expect to see this]
-- **Data Source & Method:** [How you'll measure]
-
-#### Cultural/Climate KPIs
-**KPI:** [Measure of organizational culture/climate changes]
-[Follow same structure]
-
-## Data Collection Plan
-
-### Quantitative Data Collection
-
-#### Organizational Data
-**Data Type 1:** [First type of organizational data you'll collect]
-- **Source:** [Where this data comes from]
-- **Collection Frequency:** [How often you'll collect it]
-- **Collection Method:** [How you'll extract/gather it]
-- **Analysis Plan:** [How you'll analyze this data]
-
-**Data Type 2:** [Second type of organizational data]
-[Follow same structure]
-
-#### Survey Data
-**Survey 1: Stakeholder Satisfaction Survey**
-- **Target Population:** [Who will take this survey]
-- **Sample Size Goal:** [How many responses you want]
-- **Timing:** [When you'll conduct survey - before, during, after implementation]
-- **Key Questions:** [Most important questions on the survey]
-- **Administration Method:** [How you'll distribute and collect the survey]
-
-**Survey 2:** [Second survey, if conducting multiple]
-[Follow same structure]
-
-### Qualitative Data Collection
-
-#### Interview Data
-**Interview Type 1: Implementation Experience Interviews**
-- **Target Participants:** [Who you'll interview]
-- **Number of Interviews:** [How many interviews you plan]
-- **Timing:** [When you'll conduct interviews]
-- **Key Topics:** [Main questions you'll explore]
-- **Interview Method:** [In-person, phone, video, etc.]
-
-**Interview Type 2:** [Second type of interviews]
-[Follow same structure]
-
-#### Focus Group Data
-**Focus Group:** [Topic/purpose of focus group]
-- **Participants:** [Who will participate]
-- **Timing:** [When you'll conduct focus group]
-- **Key Questions:** [Main topics you'll explore]
-
-#### Observation Data
-**What You'll Observe:** [Behaviors, processes, interactions you'll observe]
-- **Observation Settings:** [Where you'll observe]
-- **Observation Schedule:** [When and how often you'll observe]
-- **Documentation Method:** [How you'll record observations]
-
-### Document Review
-**Document Type 1:** [First type of documents you'll review]
-- **Purpose:** [What these documents will tell you]
-- **Collection Method:** [How you'll access these documents]
-
-**Document Type 2:** [Second type of documents]
-[Follow same structure]
-
-## Evaluation Timeline
-
-### Pre-Implementation Data Collection [Baseline Period]
-**Timeline:** [When you'll collect baseline data]
-
-**Activities:**
-- [ ] [First baseline data collection activity]
-- [ ] [Second baseline data collection activity]
-- [ ] [Third baseline data collection activity]
-
-### During Implementation Monitoring
-**Timeline:** [When you'll collect monitoring data during implementation]
-
-**Month 1 Activities:**
-- [ ] [First month monitoring activities]
-
-**Month 2 Activities:**
-- [ ] [Second month monitoring activities]
-
-**Quarterly Activities:**
-- [ ] [Quarterly monitoring activities]
-
-### Post-Implementation Evaluation
-**Timeline:** [When you'll conduct final evaluation]
-
-**Immediate Post-Implementation (0-1 month after):**
-- [ ] [Immediate follow-up data collection]
-
-**Short-term Follow-up (3-6 months after):**
-- [ ] [Short-term follow-up activities]
-
-**Long-term Follow-up (12+ months after):**
-- [ ] [Long-term follow-up activities]
-
-## Data Analysis Plan
-
-### Quantitative Analysis
-
-#### Outcome Analysis
-**Primary Outcome Analysis:** [How you'll analyze your main success measure]
-- **Statistical Approach:** [What statistical methods you'll use]
-- **Comparison Strategy:** [Before vs. after, treatment vs. control, etc.]
-- **Significance Criteria:** [What counts as meaningful change]
-
-**Secondary Outcome Analysis:** [How you'll analyze other outcome measures]
-[Follow same structure]
-
-#### Trend Analysis
-**How You'll Examine Trends Over Time:** [Method for analyzing changes over time]
-**Patterns You'll Look For:** [What kinds of trends would be meaningful]
-
-### Qualitative Analysis
-
-#### Thematic Analysis
-**Interview Analysis Approach:** [How you'll analyze interview data]
-**Coding Strategy:** [How you'll organize and categorize qualitative data]
-**Theme Identification:** [How you'll identify key themes]
-
-#### Content Analysis
-**Document Analysis Approach:** [How you'll analyze documents]
-**Observation Analysis:** [How you'll analyze observational data]
-
-### Mixed Methods Integration
-**How You'll Combine Quantitative and Qualitative Findings:** [Strategy for integrating different types of data]
-**Triangulation Approach:** [How you'll use multiple data sources to validate findings]
-
-## Success Criteria and Interpretation
-
-### Success Thresholds
-
-#### Must-Achieve Criteria (Implementation considered successful only if these are met)
-**Criterion 1:** [First essential success criterion]
-- **Measurement:** [How you'll measure this]
-- **Threshold:** [Specific level that must be achieved]
-
-**Criterion 2:** [Second essential success criterion]
-[Follow same structure]
-
-#### Should-Achieve Criteria (Important for full success but not make-or-break)
-**Criterion 1:** [First important success criterion]
-- **Measurement:** [How you'll measure this]
-- **Target:** [Desired level of achievement]
-
-**Criterion 2:** [Second important success criterion]
-[Follow same structure]
-
-#### Could-Achieve Criteria (Nice-to-have outcomes)
-**Criterion 1:** [First nice-to-have success criterion]
-[Follow same structure]
-
-### Interpretation Framework
-
-#### Strong Success Indicators
-[What combination of results would indicate strong success]
-
-#### Moderate Success Indicators
-[What combination of results would indicate moderate success]
-
-#### Weak Success or Failure Indicators
-[What combination of results would indicate the solution didn't work well]
-
-#### Unintended Consequences Assessment
-**Positive Unintended Consequences:** [Good things that might happen that you didn't plan for]
-**Negative Unintended Consequences:** [Problems that might arise that you need to watch for]
-**Monitoring Strategy:** [How you'll detect unintended consequences]
-
-## Stakeholder Feedback Integration
-
-### Feedback Collection Strategy
-
-#### Formal Feedback Mechanisms
-**Mechanism 1:** [First formal way stakeholders can provide feedback]
-- **Frequency:** [How often this feedback is collected]
-- **Participants:** [Who provides this feedback]
-- **Process:** [How feedback is collected and processed]
-
-**Mechanism 2:** [Second formal feedback mechanism]
-[Follow same structure]
-
-#### Informal Feedback Mechanisms  
-**Mechanism:** [How you'll capture informal feedback]
-**Documentation:** [How you'll record and use informal feedback]
-
-### Feedback Integration Process
-**How You'll Incorporate Stakeholder Feedback:** [Process for using feedback to improve implementation]
-**Decision-Making Process:** [How feedback will influence decisions about continuing/modifying the solution]
-
-## Evaluation Reporting
-
-### Reporting Schedule
-**Monthly Reports:** [What you'll include in monthly progress reports]
-**Quarterly Reports:** [What you'll include in quarterly reports]
-**Annual Report:** [What you'll include in comprehensive annual evaluation]
-
-### Report Audiences
-**Leadership Reports:** [What leaders need to know and when]
-**Staff Reports:** [What staff need to know about progress and results]
-**Stakeholder Reports:** [What other stakeholders need to know]
-**External Reports:** [Any external reporting requirements]
-
-### Report Content Framework
-**Executive Summary:** [Key points for busy executives]
-**Progress Against Goals:** [Status on achieving targets]
-**Key Findings:** [Most important discoveries from evaluation]
-**Lessons Learned:** [What you've learned about implementation]
-**Recommendations:** [What should be done next based on evaluation results]
-
-## Continuous Improvement Process
-
-### Learning Integration
-**How You'll Use Evaluation Results for Ongoing Improvement:** [Process for applying what you learn]
-**Adjustment Mechanisms:** [How you'll modify the solution based on evaluation findings]
-
-### Knowledge Management
-**Documentation Strategy:** [How you'll document lessons learned]
-**Knowledge Sharing:** [How you'll share learnings with others who might implement similar solutions]
-
-### Sustainability Assessment
-**Long-term Viability Evaluation:** [How you'll assess whether the solution can be sustained long-term]
-**Resource Requirement Assessment:** [How you'll evaluate ongoing resource needs]
-**Adaptation Planning:** [How you'll plan for future modifications based on changing conditions]
+### Primary Outcome KPIs
+
+**KPI 1: Communication Incident Rate**
+- **Definition**: Number of communication-related incidents per month (missed deadlines, rework due to misunderstanding, escalations to senior staff)
+- **Baseline**: 8.2 incidents/month (based on manager logs Oct-Dec 2025)
+- **Target**: 5-6 incidents/month by Month 3 (30-40% reduction)
+- **Data Source**: Manager incident logs (standardized tracking form)
+- **Frequency**: Monthly
+- **Responsible**: Managers submit logs to HR by 5th of each month
+
+**KPI 2: Manager Time Spent on Clarifications**
+- **Definition**: Hours per week managers spend answering repetitive/basic clarification questions
+- **Baseline**: 6 hours/week (based on manager time-tracking survey)
+- **Target**: 3 hours/week by Month 3 (50% reduction)
+- **Data Source**: Weekly manager time-tracking logs
+- **Frequency**: Weekly (reported monthly)
+- **Responsible**: Managers log time in shared spreadsheet
+
+**KPI 3: Intern Communication Confidence**
+- **Definition**: % of interns who report feeling "confident or very confident" asking questions and clarifying expectations
+- **Baseline**: 42% (based on current intern survey)
+- **Target**: 80% by Month 3
+- **Data Source**: Monthly pulse survey (2-minute Likert scale)
+- **Frequency**: Monthly
+- **Responsible**: HR sends survey, analyzes results
+
+### Secondary Outcome KPIs
+
+**KPI 4: Resource Hub Self-Service Rate**
+- **Definition**: % of common questions resolved via hub search (vs. asking a person)
+- **Baseline**: 0% (hub doesn't exist yet)
+- **Target**: 50% by Month 6
+- **Data Source**: Hub search analytics + manager logs of "could have been in hub" questions
+- **Frequency**: Monthly
+- **Responsible**: HR reviews analytics
+
+**KPI 5: Project Quality Score**
+- **Definition**: Average quality rating of intern deliverables (scored by managers on 1-5 scale)
+- **Baseline**: 3.2/5 (based on Q4 2025 project reviews)
+- **Target**: 4.0/5 by Month 6
+- **Data Source**: Manager project evaluation forms
+- **Frequency**: Per project (aggregated monthly)
+- **Responsible**: Managers submit evaluations at project completion
+
+### Process/Implementation KPIs
+
+**KPI 6: Workshop Satisfaction & Learning**
+- **Definition**: (a) % of interns satisfied with workshop (4-5 on 5-point scale); (b) Knowledge gain on pre/post quiz
+- **Target**: (a) 85% satisfaction; (b) 40% average improvement on quiz
+- **Data Source**: Post-workshop survey + pre/post knowledge assessment
+- **Frequency**: Per workshop session (quarterly)
+- **Responsible**: HR facilitator
+
+**KPI 7: Check-in Completion Rate**
+- **Definition**: % of scheduled weekly check-ins that actually occur
+- **Target**: 95% completion rate
+- **Data Source**: Manager calendar compliance logs
+- **Frequency**: Weekly (reported monthly)
+- **Responsible**: HR reviews calendar data
+
+**KPI 8: Resource Hub Usage**
+- **Definition**: (a) Number of unique users per month; (b) Average searches per user; (c) Content quality rating
+- **Target**: (a) 100% of interns use hub at least once; (b) 3+ searches per user per month; (c) 4.0/5 content rating
+- **Data Source**: Hub analytics + quarterly feedback survey
+- **Frequency**: Monthly analytics, quarterly survey
+- **Responsible**: HR hub owner
 
 ---
-INSTRUCTIONS:
-1. Design evaluation to answer the most important questions about your solution's effectiveness
-2. Include both quantitative metrics and qualitative insights
-3. Plan for both implementation monitoring and outcome evaluation
-4. Build in mechanisms for continuous improvement based on evaluation findings
-5. Consider different stakeholder information needs in your reporting plan
+
+## Implementation Fidelity Monitoring
+
+To ensure the intervention is delivered as designed (critical for interpreting results):
+
+### Fidelity Dimensions
+
+**1. Content Fidelity: Are we teaching the right things?**
+- **Standard**: Workshop covers all 5 core modules (norms, 5W1H, safety, pitfalls, tools)
+- **Monitoring**: Observer checklist during workshops (HR director spot-checks 25% of sessions)
+- **Action if below standard**: Re-train facilitator, update workshop materials
+
+**2. Dose Fidelity: Are we delivering enough?**
+- **Standard**: Workshop is full 4 hours (not shortened); check-ins are full 15 minutes
+- **Monitoring**: Workshop duration logged; check-in calendar time blocks reviewed
+- **Action if below standard**: Block workshop time more firmly; remind managers to protect check-in time
+
+**3. Moderator Fidelity: Are contextual factors stable?**
+- **Standard**: No major organizational changes (restructuring, layoffs, policy shifts) during evaluation period
+- **Monitoring**: Monthly check-in with leadership on organizational changes
+- **Action if changes occur**: Document in evaluation report; extend evaluation period if needed
+
+---
+
+## Decision Framework: What Do We Do with the Results?
+
+### Decision Rules (at 6-month evaluation point)
+
+**Scenario 1: Strong Success**
+- **Criteria**: Primary KPIs meet or exceed targets (incidents ≤5.5/month, manager time ≤3 hrs/week, confidence ≥80%)
+- **Decision**: **CONTINUE & SCALE**
+- **Actions**: 
+  - Maintain all three intervention components
+  - Share success story with leadership; request budget for expansion
+  - Begin planning advanced modules (e.g., conflict resolution, cross-cultural communication)
+
+**Scenario 2: Partial Success**
+- **Criteria**: 1-2 primary KPIs improve significantly, but not all targets met
+- **Decision**: **MODIFY & CONTINUE**
+- **Actions**:
+  - Analyze which component(s) aren't working (check process KPIs)
+  - If workshop satisfaction low → revise content based on feedback
+  - If check-in completion low → address manager barriers (time, buy-in)
+  - If hub usage low → improve discoverability, add more content
+  - Re-evaluate at 12 months after modifications
+
+**Scenario 3: No Improvement**
+- **Criteria**: No significant change in primary KPIs after 6 months
+- **Decision**: **PAUSE & DIAGNOSE**
+- **Actions**:
+  - Check implementation fidelity (was intervention delivered as designed?)
+  - If fidelity low → Re-launch with better adherence
+  - If fidelity high but no results → Return to evidence synthesis; consider alternative explanations (cultural issues more dominant than skills gaps)
+  - Conduct stakeholder interviews to understand barriers
+
+**Scenario 4: Negative Effects**
+- **Criteria**: Outcomes worsen (incidents increase, manager time increases, confidence drops)
+- **Decision**: **CANCEL INTERVENTION**
+- **Actions**:
+  - Immediately stop resource-intensive components (free up manager time)
+  - Maintain only hub as low-cost resource
+  - Investigate unintended consequences (e.g., did check-ins create learned helplessness?)
+
+---
+
+## Data Collection Timeline & Responsibilities
+
+| Phase | Time Period | Data Collection Activities | Responsible Party |
+|-------|-------------|---------------------------|-------------------|
+| **Baseline** | Oct-Dec 2025 | Incident logs, manager time surveys, intern confidence survey | Managers + HR |
+| **Launch** | Jan 2026 | Workshop pre/post quiz, satisfaction survey | HR facilitator |
+| **Month 1** | Feb 2026 | All KPIs (incidents, time, confidence, check-in completion) | Managers + HR |
+| **Month 2** | Mar 2026 | All KPIs + hub usage begins | Managers + HR |
+| **Month 3** | Apr 2026 | All KPIs + project quality ratings | Managers + HR |
+| **Month 6** | Jul 2026 | **FORMAL EVALUATION**: All KPIs + stakeholder interviews | External evaluator or HR lead |
+| **Year 2** | Quarterly | Sustainability check: KPIs 1-3 only (reduced frequency) | HR |
+
+---
+
+## Potential Confounds & How We'll Address Them
+
+**Confound 1: Seasonal variation**
+- **Issue**: Intern performance may naturally improve over time as they gain general job experience
+- **Mitigation**: Compare to historical data from previous cohorts; use comparison group if possible
+
+**Confound 2: Selection effects**
+- **Issue**: Future cohorts may be stronger/weaker than current cohort for unrelated reasons
+- **Mitigation**: Track cohort demographics and prior experience; statistically control if needed
+
+**Confound 3: Hawthorne effect**
+- **Issue**: Improvements may result from increased attention, not the intervention itself
+- **Mitigation**: Acknowledge this in evaluation report; monitor for decay effects in Year 2
+
+**Confound 4: External events**
+- **Issue**: Company-wide policy changes, market conditions, or other factors may impact results
+- **Mitigation**: Document all organizational changes; include in evaluation narrative
+
+---
+
+## Ethical Considerations
+
+**Equity**: All interns receive the intervention (no control group denied services)
+**Privacy**: Survey data collected confidentially; only aggregated results shared
+**Transparency**: Interns informed that program is being evaluated and their feedback matters
+**Consent**: Participation in surveys is voluntary (though workshop/check-ins are mandatory job requirements)
+
+---
+
+## Reporting & Communication Plan
+
+### Internal Reporting
+- **Monthly Dashboard**: One-page summary of KPIs 1-3, shared with managers and leadership
+- **Quarterly Deep Dive**: Detailed analysis of all KPIs, shared with project team
+- **6-Month Formal Evaluation**: Comprehensive report with recommendations, presented to leadership
+
+### Stakeholder Communication
+- **Managers**: Monthly email with KPI trends + actionable insights ("check-in completion dropped to 80% this month—let's troubleshoot")
+- **Interns**: Quarterly "You Said, We Did" summary showing how their feedback shaped improvements
+- **Leadership**: 6-month presentation with ROI analysis and recommendations for scaling
+
+---
+
+## Long-Term Monitoring (Years 2-3)
+
+After initial evaluation, shift to **sustainability monitoring**:
+
+- **Frequency**: Quarterly instead of monthly
+- **Metrics**: Focus on KPIs 1-3 only (incidents, manager time, confidence)
+- **Purpose**: Detect decay effects; ensure intervention remains embedded in practice
+- **Adaptations**: Annual review of workshop content and hub resources to keep current
+
+---
+
+## Conclusion
+
+This assessment plan ensures we will:
+1. **Know if the intervention works** (primary KPIs)
+2. **Understand why it works or doesn't** (process KPIs + fidelity monitoring)
+3. **Make data-driven decisions** (clear decision rules)
+4. **Adapt over time** (quarterly reviews, long-term monitoring)
+
+By using an interrupted time series design with multiple measurement points and implementation fidelity checks, we go beyond simple "did it work?" to answer "how well did it work, under what conditions, and should we continue?"
+
+This rigorous approach aligns with the evidence-based management principles guiding our entire project.
