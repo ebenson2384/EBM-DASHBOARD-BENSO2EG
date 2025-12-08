@@ -7,7 +7,8 @@
     
     document.addEventListener('DOMContentLoaded', loadAllContent);
     // Polling interval (ms) - change to 0 to disable polling
-    const POLL_INTERVAL = 3000;
+    // Disable polling on GitHub Pages to avoid excessive requests
+    const POLL_INTERVAL = window.location.hostname.includes('github.io') ? 0 : 3000;
     // mutable handle so we can stop/start polling reliably
     let intervalHandle = POLL_INTERVAL > 0 ? setInterval(loadAllContent, POLL_INTERVAL) : null;
     
@@ -107,6 +108,8 @@
                     }
                 } else if (response.status === 404 && isInitialLoad) {
                     console.log(`📝 File not found: ${filename} (create this file to see content)`);
+                } else if (!response.ok) {
+                    console.error(`❌ Failed to load ${filename}: HTTP ${response.status} ${response.statusText}`);
                 }
             } catch (error) {
                 if (isInitialLoad) {
